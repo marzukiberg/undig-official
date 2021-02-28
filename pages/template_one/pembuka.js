@@ -70,7 +70,7 @@ export default function Pembuka({ setShowFooter }) {
       <button className="btn btn-transparent rounded-pill px-5 py-2 shadow open_invitation salsa btn1">
         Buka Undangan
       </button>
-      <audio src="template_one/music.mp3" id="audio"></audio>
+      <audio src="template_one/wedding.mp3" id="audio"></audio>
     </section>
   );
 }

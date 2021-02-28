@@ -1,3 +1,3 @@
 module.exports = {
-  basePath: "/undig-official",
+  // basePath: "/undig-official",
 };
