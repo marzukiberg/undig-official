@@ -1,0 +1,13 @@
+.peta {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 1)
+    ),
+    url(../public/template_one/bg-s5.jfif);
+  @include bgFitLeft;
+  background-position-x: -200px;
+  .map {
+    border-radius: 32px;
+  }
+}

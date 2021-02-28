@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Salsa";
+  src: url("../public/fonts/Salsa/Salsa-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Times New Roman";
+  src: url("../public/fonts/Times_New_Roman_Font_Family/Times\ New\ Roman\ 400.ttf");
+}
+
+@font-face {
+  font-family: "Alex Brush";
+  src: url("../public/fonts/Alex_Brush/AlexBrush-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("../public/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf");
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("../public/fonts/Calibri/Calibri\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "Segoe Print";
+  src: url("../public/fonts/Segoe\ Print/segoepr.ttf");
+}
+.roboto {
+  font-family: Roboto, sans-serif;
+}
+.salsa {
+  font-family: Salsa, sans-serif;
+}
+.times-new-roman {
+  font-family: "Times New Roman", Times, serif;
+}
+.alex-brush {
+  font-family: "Alex Brush", sans-serif;
+}
+.averia-serif-libre {
+  font-family: "Averia Serif Libre", sans-serif;
+}
+.calibri {
+  font-family: Calibri, sans-serif;
+}
+.segoe-print {
+  font-family: "Segoe Print", sans-serif;
+}

@@ -5,11 +5,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "leaflet": "^1.7.1",
     "next": "10.0.7",
+    "popper.js": "^1.16.1",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-audio-player": "^0.14.0",
+    "react-countdown": "^2.3.1",
+    "react-dom": "17.0.1",
+    "react-remove-scroll-bar": "^2.2.0",
+    "react-scroll-detect": "^1.2.0",
+    "reactjs-popup": "^2.0.4"
   }
 }

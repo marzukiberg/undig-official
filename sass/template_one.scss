@@ -1,0 +1,106 @@
+$dark: rgba(0, 0, 0, 0.5);
+$darkpink: #de2568;
+$pink: #fb9db1;
+$yellow: #e0b048;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+main {
+  display: flex;
+  position: relative;
+  scroll-behavior: smooth;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 360px;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+}
+.with_scroll {
+  min-height: 100vh;
+  min-width: 100%;
+
+  section {
+    overflow-y: scroll;
+  }
+}
+section {
+  min-width: 360px;
+  max-height: 100vh;
+  overflow-y: hidden;
+  scroll-snap-align: start;
+  .title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .section_frame {
+    position: relative;
+    text-align: center;
+    max-width: inherit;
+    border-radius: 32px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.3) inset;
+    margin: 12px;
+    margin-top: 64px;
+    padding: 12px;
+    padding-top: 64px;
+    min-height: 80vh;
+    min-width: 300px;
+    &::after {
+      content: "";
+      background-image: url(../public/template_one/top-frame-s2.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -64px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 1px $dark;
+  background-color: rgba($color: #fff, $alpha: 0.3);
+  height: 48px;
+  width: 360px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  a.active {
+    background-color: #8fc3e9;
+    box-shadow: 0px 4px 4px $dark inset;
+  }
+}
+@mixin bgFitRight {
+  background-size: cover;
+  background-position: right;
+}
+@mixin bgFitCenter {
+  background-size: cover;
+  background-position: center;
+}
+@mixin bgFitLeft {
+  background-size: cover;
+  background-position: left;
+}
+@import "fonts";
+@import "pembuka";
+@import "mempelai";
+@import "acara";
+@import "galeri";
+@import "love_story";
+@import "peta";
+@import "penutup";
