@@ -1,0 +1,64 @@
+.acara {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 1)
+    ),
+    url(../public/template_two/bg-3.png);
+  @include bgFitCenter;
+
+  .date_frame {
+    .date_holder {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 86px;
+      height: 86px;
+      background-color: white;
+      border: 8px solid $greenv2;
+      border-radius: 50%;
+      .big_date {
+        font-size: 36px;
+      }
+      .day_holder {
+        position: absolute;
+        top: 46px;
+        &.left {
+          left: -18px;
+          transform: translate(-100%, -50%);
+        }
+        &.right {
+          right: -18px;
+          transform: translate(100%, -50%);
+        }
+        .dh_first {
+          font-size: 18px;
+        }
+        .dh_second {
+          font-size: 14px;
+          font-family: "Calibri";
+        }
+      }
+    }
+  }
+
+  .countdown_timer {
+    font-size: 14px;
+    .text-yellow {
+      color: $greenv2;
+    }
+    .countdown {
+      background-color: white;
+      width: 48px;
+      border-radius: 4px;
+      padding-top: 4px;
+      box-shadow: 0 0 4px $dark inset;
+      .time {
+        line-height: 32px;
+        font-size: 32px;
+      }
+    }
+  }
+}

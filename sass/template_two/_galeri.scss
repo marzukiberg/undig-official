@@ -1,0 +1,17 @@
+.galeri {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 1)
+    ),
+    url(../public/template_one/bg-s5.jfif);
+  @include bgFitCenter;
+
+  .galeri_image {
+    width: 300px;
+    height: 300px;
+    border-radius: 32px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

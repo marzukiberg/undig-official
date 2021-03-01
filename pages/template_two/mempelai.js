@@ -53,9 +53,9 @@ export default function Mempelai() {
               <div className="row no-gutters">
                 <div className="col-4">
                   <img
-                    src="template_one/mempelai-pria.png"
+                    src="template_two/mempelai_pria.png"
                     alt="Mempelai pria"
-                    className="card-img"
+                    className="card-img mempelai_img"
                   />
                 </div>
                 <div className="col-8">
@@ -85,9 +85,9 @@ export default function Mempelai() {
               <div className="row no-gutters d-flex flex-row-reverse">
                 <div className="col-4">
                   <img
-                    src="template_one/mempelai-wanita.png"
+                    src="template_two/mempelai_wanita.png"
                     alt="Mempelai wanita"
-                    className="card-img"
+                    className="card-img mempelai_img"
                   />
                 </div>
                 <div className="col-8">

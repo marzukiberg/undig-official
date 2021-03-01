@@ -1,0 +1,61 @@
+.pembuka {
+  background-image: url(../public/template_two/bg-1.png);
+  @include bgFitCenter;
+  overflow: hidden;
+
+  .title {
+    color: $greenv1;
+    font-size: 24px;
+  }
+  .bg_holder {
+    width: 400px;
+  }
+  .names_holder {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      position: absolute;
+      span {
+        display: block;
+        font-size: 48px;
+        line-height: 48px;
+      }
+      .and {
+        margin-left: 32px;
+        color: $greenv2;
+        text-shadow: -2px -2px 2px $greenv2;
+      }
+      .name_left {
+        margin-left: -48px;
+        color: $greenv1;
+        text-shadow: -2px -2px 2px $greenv2;
+      }
+      .name_right {
+        margin-right: -48px;
+        color: $greenv1;
+        text-shadow: -2px -2px 2px $greenv2;
+      }
+    }
+  }
+
+  .belongs_to {
+    .yth {
+      font-size: 20px;
+    }
+    .name {
+      font-size: 16px;
+    }
+  }
+
+  .open_invitation {
+    border-color: $greenv1;
+    color: $greenv2;
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      background-color: rgba($color: $greenv1, $alpha: 1);
+    }
+  }
+}

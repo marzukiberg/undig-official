@@ -1,0 +1,89 @@
+.love_story {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 1)
+    ),
+    url(../public/template_two/bg-4.png);
+  @include bgFitCenter;
+
+  @mixin pinkCircle {
+    content: "";
+    position: absolute;
+    top: 24px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $pink;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+  @mixin timelineBoxEmbel {
+    content: "";
+    position: absolute;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+  }
+
+  .title {
+    color: $pink;
+  }
+  .dalil {
+    font-size: 12px;
+  }
+
+  .timeline {
+    width: 50%;
+    display: flex;
+    position: relative;
+    .timeline-box {
+      width: 80%;
+      padding: 12px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      position: relative;
+      h2 {
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+    &.left {
+      border-right: 2px solid black;
+      &::after {
+        @include pinkCircle();
+        right: 0;
+        transform: translateX(50%);
+      }
+      .timeline-box {
+        &::after {
+          right: 0;
+          transform: rotate(45deg) translateX(30%);
+          @include timelineBoxEmbel();
+        }
+      }
+    }
+    &.right {
+      border-left: 2px solid black;
+      margin-left: 50%;
+      transform: translateX(-2px);
+      justify-content: flex-end;
+      &::after {
+        content: "";
+        left: 0;
+        transform: translateX(-50%);
+        @include pinkCircle();
+      }
+      .timeline-box {
+        &::after {
+          left: 0;
+          transform: rotate(45deg) translateX(-30%);
+          @include timelineBoxEmbel();
+        }
+      }
+    }
+  }
+}

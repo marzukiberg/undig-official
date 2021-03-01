@@ -1,0 +1,25 @@
+.mempelai {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 1)
+    ),
+    url(../public/template_two/bg-2.png);
+  @include bgFitCenter;
+
+  .section_frame {
+    .img-bismillah {
+      width: 240px;
+    }
+    .salam {
+      font-size: 14px;
+    }
+    .mempelai_img {
+      border-radius: 14px;
+    }
+    .mempelai_name {
+      color: $yellow;
+      font-size: 18px;
+    }
+  }
+}

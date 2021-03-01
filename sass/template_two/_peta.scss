@@ -1,0 +1,12 @@
+.peta {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 1)
+    ),
+    url(../public/template_two/bg-5.png);
+  @include bgFitLeft;
+  .map {
+    border-radius: 32px;
+  }
+}

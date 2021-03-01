@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import $ from "jquery";
-import { animateMempelai } from "./template_one/mempelai";
-import { animateAcara } from "./template_one/acara";
-import { animateLoveStory } from "./template_one/love_story";
-import { animateGaleri } from "./template_one/galeri";
-import { animatePeta } from "./template_one/peta";
+import { animateMempelai } from "./mempelai";
+import { animateAcara } from "./acara";
+import { animateLoveStory } from "./love_story";
+import { animateGaleri } from "./galeri";
+import { animatePeta } from "./peta";
 
 export default function Footer({ showFooter }) {
   const [active, setActive] = useState({

@@ -1,10 +1,20 @@
 import Head from "next/head";
-import Link from "next/link";
+import { useEffect, useState } from "react";
+import Footer from "./footer";
+import Acara from "./acara";
+import Galeri from "./galeri";
+import LoveStory from "./love_story";
+import Mempelai from "./mempelai";
+import Pembuka from "./pembuka";
+import Penutup from "./penutup";
+import Peta from "./peta";
+
 export default function Home() {
+  const [showFooter, setShowFooter] = useState(false);
   return (
-    <div>
+    <div className="template_two">
       <Head>
-        <title>Undig Official</title>
+        <title>Raihan dan Rahma</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -19,19 +29,15 @@ export default function Home() {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
       </Head>
 
-      <main>
-        <div className="p-3">
-          <Link href="template_one">
-            <button className="btn btn-success mb-3 d-block mx-auto">
-              Open Template One
-            </button>
-          </Link>
-          <Link href="template_two">
-            <button className="btn btn-success mb-3 d-block mx-auto">
-              Open Template Two
-            </button>
-          </Link>
-        </div>
+      <main className="shadow">
+        <Pembuka setShowFooter={setShowFooter} />
+        <Mempelai />
+        <Acara />
+        <LoveStory />
+        <Galeri />
+        <Peta />
+        <Penutup />
+        <Footer showFooter={showFooter} />
       </main>
     </div>
   );
