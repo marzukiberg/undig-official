@@ -1,44 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Form, Modal } from "react-bootstrap";
 
 export default function Penutup() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const ModalKehadiran = () => (
-    <div
-      className="modal fade"
-      id="modal_kehadiran"
-      tabIndex={-1}
-      role="dialog"
-      aria-labelledby="modelTitleId"
-      aria-hidden="true"
-    >
-      <div className="modal-dialog" role="document">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">Modal title</h5>
-            <button
-              type="button"
-              className="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div className="modal-body">Body</div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" className="btn btn-primary">
-              Save
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Modal show={show} onHide={handleClose} size="sm" centered>
+      <Modal.Body>
+        <Form>
+          <Form.Group>
+            <Form.Label htmlFor="kehadiran">Kehadiran</Form.Label>
+            <Form.Control type="text" id="kehadiran" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="nama">Nama</Form.Label>
+            <Form.Control type="text" id="nama" />
+          </Form.Group>
+          <Button block variant="success">
+            Kirim Konfirmasi Kehadiran
+          </Button>
+        </Form>
+      </Modal.Body>
+    </Modal>
   );
   return (
     <div className="with_scroll">
@@ -70,9 +54,8 @@ export default function Penutup() {
             Tekan tombol konfirmasi di bawah ini! Dan pastikan kehadiran kamu
           </p>
           <button
-            data-toggle="modal"
-            data-target="#modal_kehadiran"
-            className="btn btn-transparent btn1 calibri mb-3"
+            className="btn btn-transparent px-3 py-1 btn1 calibri mb-3"
+            onClick={handleShow}
           >
             Konfirmasi Kehadiran
           </button>
