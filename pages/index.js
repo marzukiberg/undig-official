@@ -1,36 +1,64 @@
-import Head from "next/head";
 import Link from "next/link";
+import { Button, Card, Col, Row } from "react-bootstrap";
+import Header from "./header";
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Undig Official</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        />
-        <script
-          src="https://code.jquery.com/jquery-3.5.1.min.js"
-          integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-          crossOrigin="anonymous"
-        ></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-      </Head>
-
+      <Header title="Undig Official" />
       <main>
-        <div className="p-3">
-          <Link href="template_one">
-            <button className="btn btn-success mb-3 d-block mx-auto">
-              Open Template One
-            </button>
-          </Link>
-          <Link href="template_two">
-            <button className="btn btn-success mb-3 d-block mx-auto">
-              Open Template Two
-            </button>
-          </Link>
+        <div className="p-3 mx-auto" style={{ maxWidth: 760 }}>
+          <Row>
+            <Col md="6">
+              <Card className="mb-3">
+                <Card.Header className="bg-transparent">
+                  <Card.Title>Template 1</Card.Title>
+                </Card.Header>
+                <Card.Body style={{ pointerEvents: "none" }}>
+                  <iframe
+                    src="http://localhost:3000/template_one"
+                    frameborder="0"
+                    width="100%"
+                    height="640"
+                  ></iframe>
+                </Card.Body>
+                <Card.Footer>
+                  <Link href="template_one">
+                    <Card.Link>
+                      <Button block variant="success">
+                        Buka Template
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                      </Button>
+                    </Card.Link>
+                  </Link>
+                </Card.Footer>
+              </Card>
+            </Col>
+            <Col md="6">
+              <Card className="mb-3">
+                <Card.Header className="bg-transparent">
+                  <Card.Title>Template 2</Card.Title>
+                </Card.Header>
+                <Card.Body style={{ pointerEvents: "none" }}>
+                  <iframe
+                    src="http://localhost:3000/template_two"
+                    frameborder="0"
+                    width="100%"
+                    height="640"
+                  ></iframe>
+                </Card.Body>
+                <Card.Footer>
+                  <Link href="template_two">
+                    <Card.Link>
+                      <Button block variant="success">
+                        Buka Template
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                      </Button>
+                    </Card.Link>
+                  </Link>
+                </Card.Footer>
+              </Card>
+            </Col>
+          </Row>
         </div>
       </main>
     </div>

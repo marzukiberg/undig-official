@@ -13,7 +13,9 @@ export const animatePeta = () => {
 export default function Peta() {
   useEffect(() => {
     animatePeta();
-    initMap();
+    setTimeout(() => {
+      initMap();
+    }, 2000);
   }, []);
   const initMap = () => {
     const lat = 0.4709833,

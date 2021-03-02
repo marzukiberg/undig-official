@@ -1,47 +1,33 @@
-import React from "react";
+import { Button, Form, Image, Modal } from "react-bootstrap";
+import React, { useState } from "react";
 
 export default function Penutup() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const ModalKehadiran = () => (
-    <div
-      className="modal fade"
-      id="modal-kehadiran"
-      tabIndex={-1}
-      role="dialog"
-      aria-labelledby="modelTitleId"
-      aria-hidden="true"
-    >
-      <div className="modal-dialog" role="document">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">Modal title</h5>
-            <button
-              type="button"
-              className="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div className="modal-body">Body</div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" className="btn btn-primary">
-              Save
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Modal show={show} onHide={handleClose} size="sm" centered>
+      <Modal.Body>
+        <Form>
+          <Form.Group>
+            <Form.Label htmlFor="kehadiran">Kehadiran</Form.Label>
+            <Form.Control type="text" id="kehadiran" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="nama">Nama</Form.Label>
+            <Form.Control type="text" id="nama" />
+          </Form.Group>
+          <Button block variant="success">
+            Kirim Konfirmasi Kehadiran
+          </Button>
+        </Form>
+      </Modal.Body>
+    </Modal>
   );
   return (
     <div className="with_scroll">
+      <ModalKehadiran />
       <section id="penutup" className="penutup with_frame d-flex flex-column">
         <div className="section_frame">
           <span className="d-block t1 calibri font-weight-bold mb-3">
@@ -67,9 +53,8 @@ export default function Penutup() {
             Tekan tombol konfirmasi di bawah ini! Dan pastikan kehadiran kamu
           </p>
           <button
-            data-toggle="modal"
-            data-target="#modal-kehadiran"
-            className="btn btn-transparent btn1 calibri mb-3"
+            className="btn btn-transparent px-3 py-1 btn1 calibri mb-3"
+            onClick={handleShow}
           >
             Konfirmasi Kehadiran
           </button>
@@ -78,21 +63,20 @@ export default function Penutup() {
             <span className="text-white">Undig Official</span>
           </span>
           <div
-            className="d-flex social-media justify-content-center"
+            className="d-flex social-media justify-content-center mb-4"
             style={{ gap: 32 }}
           >
             <a href="#" target="_blank" className="social-icon">
-              <img src="template_one/whatsapp.svg" alt="Whatsapp" />
+              <Image src="template_one/whatsapp.svg" alt="Whatsapp" />
               <span className="d-block calibri t5">082286062083</span>
             </a>
 
             <a href="#" target="_blank" className="social-icon">
-              <img src="template_one/instagram.svg" alt="Instagram" />{" "}
+              <Image src="template_one/instagram.svg" alt="Instagram" />
               <span className="d-block calibri t5">undig_official</span>
             </a>
           </div>
         </div>
-        <ModalKehadiran />
       </section>
     </div>
   );

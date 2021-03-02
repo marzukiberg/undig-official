@@ -13,18 +13,23 @@ export const animatePeta = () => {
 export default function Peta() {
   useEffect(() => {
     animatePeta();
-    initMap();
+    setTimeout(() => {
+      initMap();
+    }, 2000);
   }, []);
-  const initMap = () => {
+  const initMap = async () => {
     const lat = 0.4709833,
       long = 101.38293,
-      mymap = L.map("map").setView([lat, long], 14),
+      mymap = await L.map("map").setView([lat, long], 14),
       accessToken =
         "pk.eyJ1IjoibWFyenVraWJlcmciLCJhIjoiY2tmcm4xbnlpMGV0cDJwbnBkbXN0ZGZtOSJ9.t_s6XqB0K2keyQMx349FPA",
       mapLink = $("#mapLink");
 
-    mapLink.attr("href", `https://www.google.com/maps/@${lat},${long},15z`);
-    L.tileLayer(
+    await mapLink.attr(
+      "href",
+      `https://www.google.com/maps/@${lat},${long},15z`
+    );
+    await L.tileLayer(
       "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
       {
         attribution:
@@ -37,7 +42,7 @@ export default function Peta() {
       }
     ).addTo(mymap);
     // add marker
-    L.marker([lat, long]).addTo(mymap);
+    await L.marker([lat, long]).addTo(mymap);
   };
 
   return (

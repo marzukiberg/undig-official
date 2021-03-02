@@ -17,6 +17,7 @@
     "popper.js": "^1.16.1",
     "react": "17.0.1",
     "react-audio-player": "^0.14.0",
+    "react-bootstrap": "^1.5.0",
     "react-countdown": "^2.3.1",
     "react-dom": "17.0.1",
     "react-remove-scroll-bar": "^2.2.0",

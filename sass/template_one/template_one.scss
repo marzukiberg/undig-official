@@ -3,6 +3,8 @@
   $darkpink: #de2568;
   $pink: #fb9db1;
   $yellow: #e0b048;
+  $greenv1: #a9bfa0;
+  $greenv2: #6b8866;
   * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,23 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+  @mixin bgFitRight {
+    background-size: cover;
+    background-position: right;
+  }
+  @mixin bgFitCenter {
+    background-size: cover;
+    background-position: center;
+  }
+  @mixin bgFitLeft {
+    background-size: cover;
+    background-position: left;
+  }
+  @mixin mq($size) {
+    @media only screen and(max-width: $size) {
+      @content;
+    }
   }
   main {
     display: flex;
@@ -20,6 +39,9 @@
     width: 360px;
     overflow: hidden;
     scroll-snap-type: x mandatory;
+    @include mq(540px) {
+      width: 100%;
+    }
   }
   .with_scroll {
     min-height: 100vh;
@@ -31,6 +53,9 @@
   section {
     min-width: 360px;
     max-height: 100vh;
+    @include mq(540px) {
+      min-width: 100%;
+    }
     overflow-y: hidden;
     scroll-snap-align: start;
     .title {
@@ -73,6 +98,9 @@
     background-color: rgba($color: #fff, $alpha: 0.3);
     height: 48px;
     width: 360px;
+    @include mq(540px) {
+      min-width: 100%;
+    }
     a {
       display: flex;
       justify-content: center;
@@ -84,19 +112,7 @@
       box-shadow: 0px 4px 4px $dark inset;
     }
   }
-  @mixin bgFitRight {
-    background-size: cover;
-    background-position: right;
-  }
-  @mixin bgFitCenter {
-    background-size: cover;
-    background-position: center;
-  }
-  @mixin bgFitLeft {
-    background-size: cover;
-    background-position: left;
-  }
-  @import "fonts";
+
   @import "pembuka";
   @import "mempelai";
   @import "acara";
@@ -105,3 +121,4 @@
   @import "peta";
   @import "penutup";
 }
+@import "fonts";
