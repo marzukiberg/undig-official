@@ -38,9 +38,9 @@ export default function Mempelai() {
           <img
             src="template_one/bismillah.png"
             alt="Bismillah"
-            className="img-fluid img-bismillah mb-3 mx-4"
+            className="img-bismillah mb-3 mx-4"
           />
-          <p className="salam times-new-roman font-weight-bold mb-3">
+          <p className="salam times-new-roman mb-3">
             <i>Assalamu’alikum Warahmatullahi Wabaraktuh</i>
             <br />
             Dengan memohon Rahmat dan Ridho Allah SWT, Mohon do’a restu

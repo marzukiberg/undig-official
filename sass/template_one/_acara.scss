@@ -14,30 +14,30 @@
       justify-content: center;
       align-items: center;
       margin: 0 auto;
-      width: 98px;
-      height: 98px;
+      width: 86px;
+      height: 86px;
       background-color: white;
       border: 8px solid $yellow;
       border-radius: 50%;
       .big_date {
-        font-size: 48px;
+        font-size: 36px;
       }
       .day_holder {
         position: absolute;
         top: 46px;
         &.left {
-          left: -12px;
+          left: -18px;
           transform: translate(-100%, -50%);
         }
         &.right {
-          right: -12px;
+          right: -18px;
           transform: translate(100%, -50%);
         }
         .dh_first {
-          font-size: 24px;
+          font-size: 18px;
         }
         .dh_second {
-          font-size: 16px;
+          font-size: 14px;
           font-family: "Calibri";
         }
       }

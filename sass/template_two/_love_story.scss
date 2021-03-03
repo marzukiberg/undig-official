@@ -6,6 +6,7 @@
     ),
     url(../public/template_two/bg-4.png);
   @include bgFitCenter;
+  background-size: contain;
 
   @mixin pinkCircle {
     content: "";

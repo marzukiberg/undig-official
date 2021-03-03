@@ -18,6 +18,10 @@ export default function Penutup() {
             <Form.Label htmlFor="nama">Nama</Form.Label>
             <Form.Control type="text" id="nama" />
           </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="ucapan">Ucapan dan Doa</Form.Label>
+            <Form.Control as="textarea" type="textarea"></Form.Control>
+          </Form.Group>
           <Button block variant="success">
             Kirim Konfirmasi Kehadiran
           </Button>
