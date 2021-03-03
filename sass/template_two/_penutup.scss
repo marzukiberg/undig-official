@@ -30,7 +30,17 @@
     font-size: 14px;
     box-shadow: 0 4px 4px $dark inset, 0 4px 4px $dark;
   }
-  .social-icon {
-    color: rgba($color: black, $alpha: 1);
+  .social-media {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    .social-icon {
+      display: block;
+      color: rgba($color: black, $alpha: 1);
+      &:hover {
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
   }
 }

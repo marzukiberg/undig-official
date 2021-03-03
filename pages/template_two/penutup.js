@@ -30,11 +30,8 @@ export default function Penutup() {
   );
   return (
     <div className="with_scroll">
-      <section
-        id="penutup"
-        className="penutup with_frame d-flex flex-column pb-5"
-      >
-        <div className="section_frame">
+      <section id="penutup" className="penutup with_frame d-flex flex-column">
+        <div className="section_frame mb-5">
           <span className="d-block t1 calibri font-weight-bold mb-3">
             Bagi para tamu undangan diharapkan mengikuti protokol pecegahan
             Covid-19. (Memakai masker dan menjaga jarak fisik)
@@ -54,7 +51,7 @@ export default function Penutup() {
           <span className="segoe-print font-weight-bold t2 mb-3 d-block">
             ~ Raihan <span className="text-dark">&</span> Rahma ~
           </span>
-          <p className="mb-5 calibri t3">
+          <p className="calibri t3">
             Tekan tombol konfirmasi di bawah ini! Dan pastikan kehadiran kamu
           </p>
           <button
@@ -67,10 +64,7 @@ export default function Penutup() {
             Website Invitation Supported By{" "}
             <span className="text-white">Undig Official</span>
           </span>
-          <div
-            className="d-flex social-media justify-content-center"
-            style={{ gap: 32 }}
-          >
+          <div className="social-media">
             <a href="#" target="_blank" className="social-icon">
               <img src="template_one/whatsapp.svg" alt="Whatsapp" />
               <span className="d-block calibri t5">082286062083</span>
