@@ -16,7 +16,7 @@ export default function Home() {
                 <Card.Body style={{ pointerEvents: "none" }}>
                   <iframe
                     src="/template_one"
-                    frameborder="0"
+                    frameBorder="0"
                     width="100%"
                     height="640"
                   ></iframe>
@@ -41,7 +41,7 @@ export default function Home() {
                 <Card.Body style={{ pointerEvents: "none" }}>
                   <iframe
                     src="/template_two"
-                    frameborder="0"
+                    frameBorder="0"
                     width="100%"
                     height="640"
                   ></iframe>

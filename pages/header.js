@@ -17,6 +17,7 @@ export default function Header({ title }) {
       ></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+      <script src="/anti-inspect-element.js"></script>
     </Head>
   );
 }
