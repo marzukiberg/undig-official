@@ -76,7 +76,12 @@ export default function Peta() {
           <div id="map" className="map mb-3" style={{ height: 300 }} />
           <div className="d-block mx-auto roboto" style={{ fontSize: 14 }}>
             Lihat di{" "}
-            <a href="#" id="mapLink" target="_blank" className="link">
+            <a
+              href="#"
+              id="mapLink"
+              target="_blank"
+              className="link text-primary"
+            >
               Google Maps
             </a>
           </div>

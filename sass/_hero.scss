@@ -1,0 +1,27 @@
+.hero {
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 1)
+    ),
+    url("../public/images/wedding-table.jpg");
+  background-size: cover;
+  background-position: center;
+  .title {
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  .navbar {
+    transition: 1s;
+    &.show_bg {
+      background-color: $white !important;
+    }
+  }
+  h1 {
+    font-size: 64px;
+  }
+  p {
+    font-size: 24px;
+  }
+}

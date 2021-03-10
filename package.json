@@ -20,8 +20,11 @@
     "react-bootstrap": "^1.5.0",
     "react-countdown": "^2.3.1",
     "react-dom": "17.0.1",
+    "react-obfuscate": "^3.6.8",
     "react-remove-scroll-bar": "^2.2.0",
     "react-scroll-detect": "^1.2.0",
-    "reactjs-popup": "^2.0.4"
+    "react-typing-effect": "^2.0.5",
+    "reactjs-popup": "^2.0.4",
+    "wow.js": "^1.2.2"
   }
 }

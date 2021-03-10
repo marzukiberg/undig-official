@@ -1,0 +1,64 @@
+$dark: rgba(
+  $color: #000000,
+  $alpha: 0.8,
+);
+$white: rgba(
+  $color: #fff,
+  $alpha: 0.8,
+);
+$pink: #fd79a8;
+@font-face {
+  font-family: "Great Vibes";
+  src: url("/fonts/Great_Vibes/GreatVibes-Regular.ttf");
+}
+.gv {
+  font-family: "Great Vibes", cursive;
+}
+.rd {
+  font-family: "Redressed", cursive;
+}
+.pp {
+  font-family: "Poppins", sans-serif;
+}
+@mixin size($size) {
+  @media only screen and(max-width: $size) {
+    @content;
+  }
+}
+.flex-column-centered {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  background-color: transparent;
+  color: $dark;
+  border: 1px solid $dark;
+  &:hover {
+    background-color: $dark;
+    color: white;
+    border: 1px solid $dark;
+  }
+}
+.btn-primary {
+  background-color: $white;
+  border: 1px solid $pink;
+  color: $pink;
+  box-shadow: 0 0 4px $pink;
+  &:hover,
+  &:active,
+  &:focus-visible,
+  &:focus-within {
+    background-color: $pink !important;
+    color: white;
+    border: 1px solid $pink;
+  }
+}
+.main {
+  overflow: hidden;
+  @import "hero";
+  @import "mengapa_kami";
+  @import "alur";
+}

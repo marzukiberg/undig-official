@@ -1,0 +1,38 @@
+.mengapa_kami {
+  h1 {
+    position: relative;
+    display: inline-block;
+  }
+  .why_card {
+    position: relative;
+    .card {
+      max-width: 49%;
+      min-height: 33vh;
+      position: relative;
+      border-radius: 32px;
+      &:nth-child(2) {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      &:nth-child(3) {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      //   border: 0;
+      i {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+        margin: 0 12px;
+      }
+    }
+  }
+}
