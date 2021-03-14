@@ -1,10 +1,12 @@
-import Link from "next/link";
 import { useEffect } from "react";
-import { Button, Card, Col, Row } from "react-bootstrap";
-import Header from "./header";
-import Alur from "./_alur";
+import Header from "./_header";
 import Hero from "./_hero";
+import Alur from "./_alur";
 import MengapaKami from "./_mengapa_kami";
+import Paket from "./_paket";
+import Template from "./_template";
+import Contact from "./_contact";
+import Footer from "./_footer";
 
 export default function Home() {
   useEffect(() => {
@@ -12,63 +14,14 @@ export default function Home() {
   }, []);
   return (
     <div className="main">
-      <Header title="Undig Official" />
+      <Header title="Buat Undangan Pernikahanmu Spesial bersama Undig.id" />
       <Hero />
       <MengapaKami />
       <Alur />
-      {/* <Row>
-        <Col md="6">
-          <Card className="mb-3">
-            <Card.Img
-              src="images/template_one.png"
-              className="img-fluid"
-              alt="Template 1 Undanga n Digital"
-            />
-            <Card.Body style={{ pointerEvents: "none" }}>
-              <Card.Title>Template 1</Card.Title>
-              <Card.Text>
-                Template dengan nuansa penuh cinta berwarna pink.
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <Link href="template_one">
-                <Card.Link>
-                  <Button block variant="success">
-                    Buka Template
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                  </Button>
-                </Card.Link>
-              </Link>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col md="6">
-          <Card className="mb-3">
-            <Card.Img
-              src="images/template_two.png"
-              className="img-fluid"
-              alt="Template 2 Undangan Digital"
-            />
-            <Card.Body style={{ pointerEvents: "none" }}>
-              <Card.Title>Template 2</Card.Title>
-              <Card.Text>
-                Template dengan nuansa kehijauan siap memanjakan tamu undangan
-                Anda dengan tampilan yang enak dipandang.
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <Link href="template_two">
-                <Card.Link>
-                  <Button block variant="success">
-                    Buka Template
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                  </Button>
-                </Card.Link>
-              </Link>
-            </Card.Footer>
-          </Card>
-        </Col>
-      </Row> */}
+      <Paket />
+      <Template />
+      <Contact />
+      <Footer />
     </div>
   );
 }

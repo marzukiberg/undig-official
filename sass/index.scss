@@ -7,6 +7,9 @@ $white: rgba(
   $alpha: 0.8,
 );
 $pink: #fd79a8;
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "Great Vibes";
   src: url("/fonts/Great_Vibes/GreatVibes-Regular.ttf");
@@ -25,6 +28,7 @@ $pink: #fd79a8;
     @content;
   }
 }
+
 .flex-column-centered {
   min-height: 100vh;
   display: flex;
@@ -61,4 +65,8 @@ $pink: #fd79a8;
   @import "hero";
   @import "mengapa_kami";
   @import "alur";
+  @import "paket";
+  @import "template";
+  @import "contact";
+  @import "footer";
 }

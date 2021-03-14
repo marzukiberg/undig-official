@@ -1,4 +1,5 @@
 .mengapa_kami {
+  background-repeat: no-repeat;
   h1 {
     position: relative;
     display: inline-block;
@@ -10,17 +11,15 @@
       min-height: 33vh;
       position: relative;
       border-radius: 32px;
-      &:nth-child(2) {
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
+      &:nth-child(1),
       &:nth-child(3) {
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        float: right;
       }
-
+      &:nth-child(2) {
+        float: left;
+        transition: 0.5s;
+        margin-top: 25%;
+      }
       //   border: 0;
       i {
         font-size: 32px;
@@ -31,7 +30,6 @@
       }
       p {
         font-size: 12px;
-        margin: 0 12px;
       }
     }
   }

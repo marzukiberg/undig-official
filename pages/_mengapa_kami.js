@@ -2,7 +2,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 
 const MengapaKami = () => {
   return (
-    <section className="mengapa_kami py-5">
+    <section className="mengapa_kami py-5" id="mengapa_kami">
       <Container>
         <div className="text-center">
           <h1 className="text-center mb-5 pb-3 rd wow fadeInUp">
@@ -20,7 +20,7 @@ const MengapaKami = () => {
           <Col md="6">
             <div className="why_card">
               <Card className="card shadow mb-3 wow slideInLeft">
-                <Card.Body className="text-center">
+                <Card.Body className="text-center d-flex flex-column justify-content-center">
                   <i class="fa fa-magic" aria-hidden="true"></i>
                   <h2 className="rd">Penuh Animasi</h2>
                   <p className="pp">
@@ -32,7 +32,7 @@ const MengapaKami = () => {
               </Card>
 
               <Card className="card shadow mb-3 wow slideInRight">
-                <Card.Body className="text-center">
+                <Card.Body className="text-center d-flex flex-column justify-content-center">
                   <i class="fa fa-music" aria-hidden="true"></i>
                   <h2 className="rd">Bermusik</h2>
                   <p className="pp text-center">
@@ -43,8 +43,8 @@ const MengapaKami = () => {
               </Card>
 
               <Card className="card shadow mb-3 wow slideInLeft">
-                <Card.Body className="text-center">
-                  <i class="fas fa-feather-alt    "></i>
+                <Card.Body className="text-center d-flex flex-column justify-content-center">
+                  <i class="fa fa-paint-brush" aria-hidden="true"></i>
                   <h2 className="rd">Tampilan Cantik</h2>
                   <p className="pp text-center">
                     Jelajahi berbagai template yang cantik dari kami, pilih

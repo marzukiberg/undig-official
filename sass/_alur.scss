@@ -1,5 +1,12 @@
 .alur {
-  background-color: #fafafa;
+  position: relative;
+  .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   .card {
     border-radius: 32px;
     h2 {
@@ -11,6 +18,16 @@
     }
     .num {
       font-size: 48px;
+    }
+    @include size(760px) {
+      width: 80%;
+    }
+    &.ganjil {
+      margin-top: 120px;
+      @include size(760px) {
+        margin-top: 0;
+        margin-left: 20%;
+      }
     }
   }
 }

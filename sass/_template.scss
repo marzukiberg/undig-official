@@ -1,0 +1,20 @@
+.template {
+  position: relative;
+  .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .card {
+    border-radius: 32px;
+  }
+
+  .template_img {
+    max-height: 300px;
+    object-fit: contain;
+    cursor: zoom-in;
+  }
+}

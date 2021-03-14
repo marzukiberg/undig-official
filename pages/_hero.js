@@ -34,8 +34,9 @@ const Hero = () => {
             <Nav className="ml-auto pp text-white">
               <Nav.Link href="#home">Beranda</Nav.Link>
               <Nav.Link href="#alur">Alur Pemesanan</Nav.Link>
-              <Nav.Link href="#template">Template</Nav.Link>
               <Nav.Link href="#paket">Paket</Nav.Link>
+              <Nav.Link href="#template">Template</Nav.Link>
+              <Nav.Link href="#contact">Kontak</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -48,7 +49,10 @@ const Hero = () => {
             cukup dengan satu link, undang semua kerabat dan teman dekatmu
             dengan mudah.
           </p>
-          <a href="#alur" className="btn btn-primary px-5 rounded-pill pp">
+          <a
+            href="#mengapa_kami"
+            className="btn btn-primary px-5 rounded-pill pp"
+          >
             MULAI
           </a>
         </div>

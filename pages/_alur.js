@@ -2,12 +2,17 @@ import { Container, Card, Button, Row, Col } from "react-bootstrap";
 
 const Alur = () => {
   return (
-    <section className="alur py-5">
+    <section className="alur py-5" id="alur">
+      <img
+        src="images/flower.png"
+        alt="Flower"
+        className="background wow fadeIn"
+      />
       <Container>
         <h1 className="text-center rd mb-5">Alur Pemesanan</h1>
         <Row>
           <Col md="3">
-            <Card className="card shadow mb-3 pp wow fadeInUp">
+            <Card className="card shadow mb-3 pp wow fadeInUp genap">
               <Card.Body className="text-center">
                 <span className="pp num">1</span>
                 <h2 className="rd">Pilih Template</h2>
@@ -16,14 +21,13 @@ const Alur = () => {
                   terdapat klasifikasi paket dan detail paketnya.
                 </p>
                 <Card.Link href="#template">
-                  <Button>Lihat</Button>
+                  <Button className="rounded-pill">Lihat</Button>
                 </Card.Link>
               </Card.Body>
             </Card>
           </Col>
           <Col md="3">
-            {" "}
-            <Card className="card shadow mb-3 pp wow fadeInUp">
+            <Card className="card shadow mb-3 pp wow fadeInUp ganjil">
               <Card.Body className="text-center">
                 <span className="pp num">2</span>
                 <h2 className="rd">Lakukan Pemesanan</h2>
@@ -36,7 +40,7 @@ const Alur = () => {
             </Card>
           </Col>
           <Col md="3">
-            <Card className="card shadow mb-3 pp wow fadeInUp">
+            <Card className="card shadow mb-3 pp wow fadeInUp genap">
               <Card.Body className="text-center">
                 <span className="pp num">3</span>
                 <h2 className="rd">Kirimkan Data</h2>
@@ -48,7 +52,7 @@ const Alur = () => {
             </Card>
           </Col>
           <Col md="3">
-            <Card className="card shadow mb-3 pp wow fadeInUp">
+            <Card className="card shadow mb-3 pp wow fadeInUp ganjil">
               <Card.Body className="text-center">
                 <span className="pp num">4</span>
                 <h2 className="rd">Bayar & Tunggu Pesanan</h2>

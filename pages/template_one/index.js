@@ -8,7 +8,7 @@ import Mempelai from "./mempelai";
 import Pembuka from "./pembuka";
 import Penutup from "./penutup";
 import Peta from "./peta";
-import Header from "../header";
+import Header from "../_header";
 
 export default function index() {
   const [showFooter, setShowFooter] = useState(false);
