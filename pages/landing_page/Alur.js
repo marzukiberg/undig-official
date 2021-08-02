@@ -5,7 +5,7 @@ import H1 from '../components/H1';
 const Alur = () => {
   return (
     <section className="alur relative" id="alur">
-      <img
+      <imgw
         src="images/flower.png"
         alt="Flower"
         className="absolute left-0 top-0 transform w-full h-full object-contain -z-1 lg:object-cover"

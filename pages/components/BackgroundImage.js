@@ -1,4 +1,4 @@
-export default BackgroundImage = ({ src, className, noOverlay = false }) => {
+const BackgroundImage = ({ src, className, noOverlay = false }) => {
   return (
     <div>
       <img
@@ -15,3 +15,5 @@ export default BackgroundImage = ({ src, className, noOverlay = false }) => {
     </div>
   );
 };
+
+export default BackgroundImage;
