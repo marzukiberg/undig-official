@@ -1,14 +1,14 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import Footer from "./footer";
-import Acara from "./acara";
-import Galeri from "./galeri";
-import LoveStory from "./love_story";
-import Mempelai from "./mempelai";
-import Pembuka from "./pembuka";
-import Penutup from "./penutup";
-import Peta from "./peta";
-import Header from "../_header";
+import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import Footer from './footer';
+import Acara from './acara';
+import Galeri from './galeri';
+import LoveStory from './love_story';
+import Mempelai from './mempelai';
+import Pembuka from './pembuka';
+import Penutup from './penutup';
+import Peta from './peta';
+import Header from '../components/Header';
 
 export default function index() {
   const [showFooter, setShowFooter] = useState(false);

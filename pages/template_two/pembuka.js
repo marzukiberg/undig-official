@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { zeroRightClassName } from 'react-remove-scroll-bar';
 import $ from 'jquery';
 import { animateMempelai } from './mempelai';
 import {
@@ -47,7 +46,7 @@ export default function Pembuka({ setShowFooter }) {
   });
   return (
     <section
-      className={`pembuka d-flex flex-column justify-content-center align-items-center ${zeroRightClassName}`}
+      className={`pembuka d-flex flex-column justify-content-center align-items-center $`}
     >
       <span className="title salsa">The Wedding Of</span>
       <div className="names_holder">
