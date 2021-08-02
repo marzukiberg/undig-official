@@ -1,6 +1,6 @@
-import { Card } from '../components/Card';
-import { Container } from '../components/Container';
-import { H1 } from '../components/H1';
+import Card from '../components/Card';
+import Container from '../components/Container';
+import H1 from '../components/H1';
 
 const Paket = () => {
   const paket = [

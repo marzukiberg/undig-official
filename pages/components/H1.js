@@ -1,4 +1,4 @@
-export const H1 = ({ children, className }) => {
+export default H1 = ({ children, className }) => {
   return (
     <h1
       className={

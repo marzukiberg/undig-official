@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
-import { BackgroundImage } from '../components/BackgroundImage';
+import BackgroundImage from '../components/BackgroundImage';
 import ContainerTemplate from '../components/ContainerTemplate';
 import { fadeIn, fadeInUp } from '../utils/Constants';
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Card } from '../components/Card';
-import { Container } from '../components/Container';
-import { H1 } from '../components/H1';
+import Card from '../components/Card';
+import Container from '../components/Container';
+import H1 from '../components/H1';
 
 const Template = () => {
   const noHp = '6282286062083';

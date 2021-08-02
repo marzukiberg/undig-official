@@ -1,4 +1,4 @@
-export const BackgroundImage = ({ src, className, noOverlay = false }) => {
+export default BackgroundImage = ({ src, className, noOverlay = false }) => {
   return (
     <div>
       <img

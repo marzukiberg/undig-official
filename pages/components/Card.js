@@ -1,4 +1,4 @@
-export const Card = ({ children, className }) => {
+export default Card = ({ children, className }) => {
   return (
     <div
       className={

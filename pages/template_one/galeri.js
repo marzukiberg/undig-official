@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import Modal from 'react-modal';
-import { BackgroundImage } from '../components/BackgroundImage';
+import BackgroundImage from '../components/BackgroundImage';
 import ContainerTemplate from '../components/ContainerTemplate';
 import { fadeIn, fadeInUp } from '../utils/Constants';
 

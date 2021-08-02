@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { BackgroundImage } from '../components/BackgroundImage';
+import BackgroundImage from '../components/BackgroundImage';
 import ContainerTemplate from '../components/ContainerTemplate';
 import { fadeIn, slideLeft, slideRight } from '../utils/Constants';
 

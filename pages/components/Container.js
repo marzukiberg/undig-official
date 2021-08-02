@@ -1,4 +1,4 @@
-export const Container = ({ children, className }) => {
+export default Container = ({ children, className }) => {
   return (
     <div
       className={
