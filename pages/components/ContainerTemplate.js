@@ -10,7 +10,7 @@ const ContainerTemplate = ({ children, className, noFrame = false }) => {
         {!noFrame && (
           <div className="absolute top-0 left-0 w-full h-full -z-1">
             <img
-              src="template_one/frame.png"
+              src="/template_one/embel/frame.png"
               alt="Frame"
               className="absolute"
             />

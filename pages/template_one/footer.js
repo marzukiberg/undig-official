@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/Constants';
 
 const BottomLink = ({
   href = '#',
@@ -7,21 +9,25 @@ const BottomLink = ({
   img,
 }) => {
   return (
-    <a
+    <motion.a
+      variants={fadeIn}
       href="#"
       onClick={onClick}
       className={`flex-grow h-12 flex items-center justify-center duration-300 hover:bg-blue-500 hover:bg-opacity-50 ${className}`}
     >
-      <img src={`template_one/${img}`} alt="Footer Icon" />
-    </a>
+      <img src={`/template_one/${img}`} alt="Footer Icon" />
+    </motion.a>
   );
 };
 
 export default function Footer({ pageindex, setpageindex }) {
   return (
-    <footer
+    <motion.footer
+      variants={fadeIn}
+      initial="hide"
+      animate="show"
       id="template-one"
-      className="flex fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm mx-auto "
+      className="flex fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm mx-auto z-50 "
       style={{
         boxShadow: 'inset 4px 0 4px rgba(0,0,0,0.5)',
       }}
@@ -62,6 +68,6 @@ export default function Footer({ pageindex, setpageindex }) {
         className={pageindex === 6 && 'bg-blue-500 bg-opacity-50'}
         img="icon-penutup.svg"
       />
-    </footer>
+    </motion.footer>
   );
 }

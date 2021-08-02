@@ -1,13 +1,13 @@
-import Head from "next/head";
-import React, { useEffect } from "react";
-import $ from "jquery";
-import { fadeIn, hidden, initPopup, showPopup } from "./animations";
+import Head from 'next/head';
+import React, { useEffect } from 'react';
+import $ from 'jquery';
+import { fadeIn, hidden, initPopup, showPopup } from './animations';
 
 export const animatePeta = () => {
-  initPopup(".peta .section_frame");
-  hidden(".map");
-  showPopup(".peta .section_frame", () => {
-    fadeIn(".map");
+  initPopup('.peta .section_frame');
+  hidden('.map');
+  showPopup('.peta .section_frame', () => {
+    fadeIn('.map');
   });
 };
 export default function Peta() {
@@ -20,19 +20,19 @@ export default function Peta() {
   const initMap = () => {
     const lat = 0.4709833,
       long = 101.38293,
-      mymap = L.map("map").setView([lat, long], 14),
+      mymap = L.map('map').setView([lat, long], 14),
       accessToken =
-        "pk.eyJ1IjoibWFyenVraWJlcmciLCJhIjoiY2tmcm4xbnlpMGV0cDJwbnBkbXN0ZGZtOSJ9.t_s6XqB0K2keyQMx349FPA",
-      mapLink = $("#mapLink");
+        'pk.eyJ1IjoibWFyenVraWJlcmciLCJhIjoiY2tmcm4xbnlpMGV0cDJwbnBkbXN0ZGZtOSJ9.t_s6XqB0K2keyQMx349FPA',
+      mapLink = $('#mapLink');
 
-    mapLink.attr("href", `https://www.google.com/maps/@${lat},${long},15z`);
+    mapLink.attr('href', `https://www.google.com/maps/@${lat},${long},15z`);
     L.tileLayer(
-      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
       {
         attribution:
           'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
-        id: "mapbox/streets-v11",
+        id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
         accessToken: accessToken,
@@ -55,7 +55,7 @@ export default function Peta() {
         <div className="section_frame">
           <span className="title salsa">Peta Lokasi</span>
           <img
-            src="template_one/love-story-underline.svg"
+            src="/template_one/love-story-underline.svg"
             alt="Underline Lokasi"
             className="img-fluid lokas_underline mb-3"
           />
@@ -72,7 +72,7 @@ export default function Peta() {
           </div>
           <div id="map" className="map mb-3" style={{ height: 300 }} />
           <div className="d-block mx-auto roboto" style={{ fontSize: 14 }}>
-            Lihat di{" "}
+            Lihat di{' '}
             <a href="#" id="mapLink" target="_blank" className="link">
               Google Maps
             </a>

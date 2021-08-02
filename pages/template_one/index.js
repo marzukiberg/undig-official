@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Scrollbar from 'react-scrollbars-custom';
 import Header from '../components/Header';
 import Acara from './Acara';
@@ -36,7 +36,7 @@ export default function index() {
 
   return (
     <div className="template_one">
-      <audio src="wedding.mp3" ref={audioRef}></audio>
+      <audio src="/wedding.mp3" ref={audioRef}></audio>
       <Header title="Raihan dan Rahma" />
 
       <Scrollbar

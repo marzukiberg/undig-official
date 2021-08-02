@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
+    "framer-motion": "^4.1.17",
     "jquery": "^3.6.0",
     "leaflet": "^1.7.1",
     "next": "10.0.7",
@@ -24,7 +26,8 @@
     "react-leaflet": "^3.2.0",
     "react-modal": "^3.14.3",
     "react-scrollbars-custom": "^4.0.25",
-    "react-spring": "^9.2.3"
+    "react-spring": "^9.2.3",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",

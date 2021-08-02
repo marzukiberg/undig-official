@@ -1,7 +1,9 @@
-import { Button, Form, Image, Modal } from 'react-bootstrap';
-import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { Image } from 'react-bootstrap';
 import { BackgroundImage } from '../components/BackgroundImage';
 import ContainerTemplate from '../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../utils/Constants';
 
 export default function Penutup() {
   const [show, setShow] = useState(false);
@@ -11,11 +13,20 @@ export default function Penutup() {
   };
 
   return (
-    <section id="penutup" className="penutup relative">
-      <BackgroundImage src="/template_one/bg-section-7.png" />
+    <motion.section
+      variants={fadeIn}
+      initial="hide"
+      animate="show"
+      id="penutup"
+      className="penutup relative"
+    >
+      <BackgroundImage src="/template_one/background/7.png" />
 
       <ContainerTemplate>
-        <div className="header text-center font-roboto space-y-3 text-sm">
+        <motion.div
+          variants={fadeInUp}
+          className="header text-center font-roboto space-y-3 text-sm"
+        >
           <p className="font-bold">
             Bagi para tamu undangan diharapkan mengikuti protokol pecegahan
             Covid-19. (Memakai masker dan menjaga jarak fisik)
@@ -28,8 +39,8 @@ export default function Penutup() {
             bagi kaum yang berpikir.” <br /> (Q.S. Ar-Rum : 21) <br />
             <strong>Wassalamu’alaikum Warahmatullahi Wabarakatuh</strong>
           </p>
-        </div>
-        <div className="content space-y-3">
+        </motion.div>
+        <motion.div variants={fadeInUp} className="content space-y-3">
           <div className="font-quicksand flex flex-col items-center text-sm">
             <span>Turut Berbahagia</span>
             <span>Segenap Keluarga Besar</span>
@@ -60,7 +71,7 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="template_one/whatsapp.svg" alt="Whatsapp" />
+                <Image src="/template_one/whatsapp.svg" alt="Whatsapp" />
                 <span className="d-block">082286062083</span>
               </a>
 
@@ -69,12 +80,12 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="template_one/instagram.svg" alt="Instagram" />
+                <Image src="/template_one/instagram.svg" alt="Instagram" />
                 <span className="d-block">undig_official</span>
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </ContainerTemplate>
 
       <div
@@ -135,6 +146,6 @@ export default function Penutup() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
 import { BackgroundImage } from '../components/BackgroundImage';
 import ContainerTemplate from '../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../utils/Constants';
 import CountdownTimer from './components/CountdownTimer';
 
-export const animateAcara = () => {};
 export default function Acara() {
-  useEffect(() => {
-    animateAcara();
-  }, []);
   const DateFrame = ({ t1, t2, t3, t4, t5, t6, t7 }) => (
-    <div className="font-averia grid gap-3 place-items-center">
+    <motion.div
+      className="font-averia grid gap-3 place-items-center"
+      variants={fadeInUp}
+    >
       <div className="relative">
         <div className="text-right absolute -left-full top-1/2 transform -translate-y-1/2 w-full pr-3">
           <span className="block font-bold">{t2}</span>
@@ -27,19 +28,31 @@ export default function Acara() {
         <span className="block font-bold">{t6}</span>
         <span>{t7}</span>
       </div>
-    </div>
+    </motion.div>
   );
 
   return (
-    <section id="acara" className="acara relative">
-      <BackgroundImage src="/template_one/bg-section-3.png" />
+    <motion.section
+      variants={fadeIn}
+      initial="hide"
+      animate="show"
+      id="acara"
+      className="acara relative"
+    >
+      <BackgroundImage src="/template_one/background/3.png" />
 
       <ContainerTemplate>
-        <h1 className="text-center font-salsa text-2xl">Rangkaian Acara</h1>
+        <motion.h1
+          variants={fadeIn}
+          className="text-center font-salsa text-2xl"
+        >
+          Rangkaian Acara
+        </motion.h1>
 
-        <div className="content space-y-3">
-          <img
-            src="template_one/akad.png"
+        <motion.div className="content space-y-3">
+          <motion.img
+            variants={fadeIn}
+            src="/template_one/embel/akad.png"
             alt="Akad Nikah"
             className="w-full"
           />
@@ -52,8 +65,9 @@ export default function Acara() {
             t6="Kediaman Mempelai Wanita"
             t7="Jalan Bina Keluarga"
           />
-          <img
-            src="template_one/resepsi.png"
+          <motion.img
+            variants={fadeIn}
+            src="/template_one/embel/resepsi.png"
             alt="Resepsi Pernikahan Underline"
             className="w-full"
           />
@@ -67,8 +81,8 @@ export default function Acara() {
             t7="Jalan Bina Keluarga"
           />
           <CountdownTimer date={'2021-10-24 10:00'} />
-        </div>
+        </motion.div>
       </ContainerTemplate>
-    </section>
+    </motion.section>
   );
 }

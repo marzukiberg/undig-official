@@ -19,10 +19,9 @@ export default function Header({ title }) {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js"></script>
 
       {/* Leaflet */}
-      <link rel="stylesheet" href="vendor/css/leaflet.css" />
-      <script src="vendor/js/leaflet.js"></script>
-
-      <link rel="stylesheet" href="/main.js" />
+      <link rel="stylesheet" href="/vendor/css/leaflet.css" />
+      <script src="/vendor/js/leaflet.js"></script>
+      <script src="/main.js"></script>
       {/* <script src="/anti-inspect-element.js"></script> */}
     </Head>
   );

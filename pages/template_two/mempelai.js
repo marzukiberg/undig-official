@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import {
   fadeIn,
   hidden,
@@ -8,18 +8,18 @@ import {
   slideLeft,
   slideRight,
   slideTop,
-} from "./animations";
+} from './animations';
 
 export const animateMempelai = () => {
-  [".salam", ".img-bismillah"].forEach((item) => hidden(item));
-  initSlideRight(".holder_left");
-  initSlideLeft(".holder_right");
-  initSlideTop(".section_frame");
-  slideTop(".section_frame");
-  fadeIn(".img-bismillah", () => {
-    fadeIn(".salam", () => {
-      slideRight(".holder_left");
-      slideLeft(".holder_right");
+  ['.salam', '.img-bismillah'].forEach((item) => hidden(item));
+  initSlideRight('.holder_left');
+  initSlideLeft('.holder_right');
+  initSlideTop('.section_frame');
+  slideTop('.section_frame');
+  fadeIn('.img-bismillah', () => {
+    fadeIn('.salam', () => {
+      slideRight('.holder_left');
+      slideLeft('.holder_right');
     });
   });
 };
@@ -36,7 +36,7 @@ export default function Mempelai() {
       >
         <div className="section_frame">
           <img
-            src="template_one/bismillah.png"
+            src="/template_one/bismillah.png"
             alt="Bismillah"
             className="img-bismillah mb-3 mx-4"
           />
@@ -64,7 +64,7 @@ export default function Mempelai() {
                       Raihan bin Alfajri
                     </span>
                     <img
-                      src="template_one/underline-nama-mempelai.png"
+                      src="/template_one/underline-nama-mempelai.png"
                       alt="Underline Nama Mempelai"
                       className="img-fluid mempelai_underline"
                     />
@@ -96,7 +96,7 @@ export default function Mempelai() {
                       Rahma binti Abdullah
                     </span>
                     <img
-                      src="template_one/underline-nama-mempelai.png"
+                      src="/template_one/underline-nama-mempelai.png"
                       alt="Underline Nama Mempelai"
                       className="img-fluid mempelai_underline"
                     />

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import {
   fadeIn,
   hidden,
@@ -6,17 +6,17 @@ import {
   initSlideTop,
   showPopup,
   slideTop,
-} from "./animations";
+} from './animations';
 
 export const animateLoveStory = () => {
-  initPopup(".love_story .love_story_underline");
-  hidden(".love_story .title");
-  hidden(".dalil");
-  initSlideTop(".timelines", "100vh");
-  fadeIn(".love_story .title", () => {
-    showPopup(".love_story .love_story_underline");
-    fadeIn(".dalil", () => {
-      slideTop(".timelines");
+  initPopup('.love_story .love_story_underline');
+  hidden('.love_story .title');
+  hidden('.dalil');
+  initSlideTop('.timelines', '100vh');
+  fadeIn('.love_story .title', () => {
+    showPopup('.love_story .love_story_underline');
+    fadeIn('.dalil', () => {
+      slideTop('.timelines');
     });
   });
 };
@@ -30,7 +30,7 @@ export default function LoveStory() {
         <div className="section_frame">
           <span className="title segoe-print font-weight-bold">Love Story</span>
           <img
-            src="template_one/love-story-underline.svg"
+            src="/template_one/love-story-underline.svg"
             alt="Underline Love Story"
             className="img-fluid love_story_underline mb-3"
           />

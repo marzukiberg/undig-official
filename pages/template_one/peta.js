@@ -1,19 +1,16 @@
-import Head from 'next/head';
+import { motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
 import { BackgroundImage } from '../components/BackgroundImage';
 import ContainerTemplate from '../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../utils/Constants';
 
 export default function Peta() {
   const mapRef = useRef();
   const mapLinkRef = useRef();
-  useEffect(() => {
-    let mounted = true;
-    if (mounted) {
+  useEffect(async () => {
+    if (window !== undefined) {
       initMap();
     }
-    return () => {
-      mounted = false;
-    };
   }, []);
 
   const initMap = async () => {
@@ -44,18 +41,27 @@ export default function Peta() {
   };
 
   return (
-    <section id="peta" className="peta relative">
-      <BackgroundImage noOverlay src="/template_one/bg-section-6.png" />
+    <motion.section
+      variants={fadeIn}
+      initial="hide"
+      animate="show"
+      id="peta"
+      className="peta relative"
+    >
+      <BackgroundImage noOverlay src="/template_one/background/6.png" />
 
       <ContainerTemplate>
-        <div className="header text-center font-quicksand space-y-3">
+        <motion.div
+          variants={fadeInUp}
+          className="header text-center font-quicksand space-y-3"
+        >
           <img
-            src="template_one/title-section-6.png"
+            src="/template_one/embel/title-section-6.png"
             alt="Title"
             className="w-1/2 block mx-auto"
           />
           <img
-            src="template_one/underline-3.png"
+            src="/template_one/embel/underline-3.png"
             alt="Underline Lokasi"
             className="w-1/2 block mx-auto"
           />
@@ -63,9 +69,9 @@ export default function Peta() {
             <span className="font-bold block">Kediaman Mempelai Wanita</span>
             <span>Jalan Bina Keluarga</span>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="content space-y-3">
+        <motion.div variants={fadeInUp} className="content space-y-3">
           <div
             id="map"
             ref={mapRef}
@@ -82,8 +88,8 @@ export default function Peta() {
               Google Maps
             </a>
           </div>
-        </div>
+        </motion.div>
       </ContainerTemplate>
-    </section>
+    </motion.section>
   );
 }

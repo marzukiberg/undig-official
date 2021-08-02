@@ -1,33 +1,35 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import Modal from 'react-modal';
 import { BackgroundImage } from '../components/BackgroundImage';
 import ContainerTemplate from '../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../utils/Constants';
 
 export default function Galeri() {
   const [modalGallery, showModalGallery] = useState(false);
 
   const images = [
     {
-      original: 'template_two/galeri (1).png',
-      thumbnail: 'template_two/galeri (1).png',
+      original: '/template_one/galeri/1.png',
+      thumbnail: '/template_one/galeri/1.png',
     },
     {
-      original: 'template_two/galeri (2).png',
-      thumbnail: 'template_two/galeri (2).png',
+      original: '/template_one/galeri/2.png',
+      thumbnail: '/template_one/galeri/2.png',
     },
     {
-      original: 'template_two/galeri (3).png',
-      thumbnail: 'template_two/galeri (3).png',
+      original: '/template_one/galeri/3.png',
+      thumbnail: '/template_one/galeri/3.png',
     },
     {
-      original: 'template_two/galeri (4).png',
-      thumbnail: 'template_two/galeri (4).png',
+      original: '/template_one/galeri/4.png',
+      thumbnail: '/template_one/galeri/4.png',
     },
     {
-      original: 'template_two/galeri (5).png',
-      thumbnail: 'template_two/galeri (5).png',
+      original: '/template_one/galeri/5.png',
+      thumbnail: '/template_one/galeri/5.png',
     },
   ];
 
@@ -43,16 +45,25 @@ export default function Galeri() {
           <ImageGallery items={images} lazyLoad />
         </div>
       </Modal>
-      <section id="galeri" className="galeri relative">
-        <BackgroundImage noOverlay src="/template_one/bg-section-5.png" />
+      <motion.section
+        variants={fadeIn}
+        initial="hide"
+        animate="show"
+        id="galeri"
+        className="galeri relative"
+      >
+        <BackgroundImage noOverlay src="/template_one/background/5.png" />
 
         <ContainerTemplate>
           <div className="header text-center font-quicksand space-y-3">
-            <h1 className="text-center font-segoe text-2xl text-white">
+            <motion.h1
+              variants={fadeInUp}
+              className="text-center font-segoe text-2xl text-white"
+            >
               You & Me
-            </h1>
+            </motion.h1>
           </div>
-          <div className="content space-y-3">
+          <motion.div variants={fadeIn} className="content space-y-3">
             {images.map((item, index) => (
               <img
                 key={index}
@@ -62,9 +73,9 @@ export default function Galeri() {
                 onClick={() => showModalGallery(true)}
               />
             ))}
-          </div>
+          </motion.div>
         </ContainerTemplate>
-      </section>
+      </motion.section>
     </>
   );
 }

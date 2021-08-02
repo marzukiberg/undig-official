@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Button, Form, Modal } from 'react-bootstrap';
 
 export default function Penutup() {
   const [show, setShow] = useState(false);
@@ -61,17 +61,17 @@ export default function Penutup() {
             Konfirmasi Kehadiran
           </button>
           <span className="t4 bg-transparent shadow calibri d-block mb-3">
-            Website Invitation Supported By{" "}
+            Website Invitation Supported By{' '}
             <span className="text-white">Undig Official</span>
           </span>
           <div className="social-media">
             <a href="#" target="_blank" className="social-icon">
-              <img src="template_one/whatsapp.svg" alt="Whatsapp" />
+              <img src="/template_one/whatsapp.svg" alt="Whatsapp" />
               <span className="d-block calibri t5">082286062083</span>
             </a>
 
             <a href="#" target="_blank" className="social-icon">
-              <img src="template_one/instagram.svg" alt="Instagram" />{" "}
+              <img src="/template_one/instagram.svg" alt="Instagram" />{' '}
               <span className="d-block calibri t5">undig_official</span>
             </a>
           </div>

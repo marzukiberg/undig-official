@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import $ from "jquery";
-import { animateMempelai } from "./mempelai";
-import { animateAcara } from "./acara";
-import { animateLoveStory } from "./love_story";
-import { animateGaleri } from "./galeri";
-import { animatePeta } from "./peta";
+import React, { useEffect, useState } from 'react';
+import $ from 'jquery';
+import { animateMempelai } from './mempelai';
+import { animateAcara } from './acara';
+import { animateLoveStory } from './love_story';
+import { animateGaleri } from './galeri';
+import { animatePeta } from './peta';
 
 export default function Footer({ showFooter }) {
   const [active, setActive] = useState({
@@ -18,8 +18,8 @@ export default function Footer({ showFooter }) {
 
   useEffect(() => {
     showFooter
-      ? $("footer").css({ display: "flex", bottom: -64 }).animate({ bottom: 0 })
-      : $("footer").css({ display: "none" });
+      ? $('footer').css({ display: 'flex', bottom: -64 }).animate({ bottom: 0 })
+      : $('footer').css({ display: 'none' });
   });
   const openMempelai = () => {
     setActive({ mempelai: true });
@@ -45,45 +45,45 @@ export default function Footer({ showFooter }) {
     <footer>
       <a
         href="#mempelai"
-        className={active.mempelai ? "active" : ""}
+        className={active.mempelai ? 'active' : ''}
         onClick={openMempelai}
       >
-        <img src="template_one/icon-mempelai.svg" alt="Footer Icon" />
+        <img src="/template_one/icon-mempelai.svg" alt="Footer Icon" />
       </a>
       <a
         href="#acara"
-        className={active.acara ? "active" : ""}
+        className={active.acara ? 'active' : ''}
         onClick={openAcara}
       >
-        <img src="template_one/icon-acara.svg" alt="Footer Icon" />
+        <img src="/template_one/icon-acara.svg" alt="Footer Icon" />
       </a>
       <a
         href="#love_story"
-        className={active.loveStory ? "active" : ""}
+        className={active.loveStory ? 'active' : ''}
         onClick={openLoveStory}
       >
-        <img src="template_one/icon-love-story.svg" alt="Footer Icon" />
+        <img src="/template_one/icon-love-story.svg" alt="Footer Icon" />
       </a>
       <a
         href="#galeri"
-        className={active.galeri ? "active" : ""}
+        className={active.galeri ? 'active' : ''}
         onClick={openGaleri}
       >
-        <img src="template_one/icon-galeri.svg" alt="Footer Icon" />
+        <img src="/template_one/icon-galeri.svg" alt="Footer Icon" />
       </a>
       <a
         href="#peta"
-        className={active.peta ? "active" : ""}
+        className={active.peta ? 'active' : ''}
         onClick={openPeta}
       >
-        <img src="template_one/icon-peta.svg" alt="Footer Icon" />
+        <img src="/template_one/icon-peta.svg" alt="Footer Icon" />
       </a>
       <a
         href="#penutup"
-        className={active.penutup ? "active" : ""}
+        className={active.penutup ? 'active' : ''}
         onClick={() => setActive({ penutup: true })}
       >
-        <img src="template_one/icon-penutup.svg" alt="Footer Icon" />
+        <img src="/template_one/icon-penutup.svg" alt="Footer Icon" />
       </a>
     </footer>
   );

@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { zeroRightClassName } from "react-remove-scroll-bar";
-import $ from "jquery";
-import { animateMempelai } from "./mempelai";
+import React, { useEffect } from 'react';
+import { zeroRightClassName } from 'react-remove-scroll-bar';
+import $ from 'jquery';
+import { animateMempelai } from './mempelai';
 import {
   hidden,
   fadeIn,
@@ -12,36 +12,36 @@ import {
   slideLeft,
   slideRight,
   slideDown,
-} from "./animations";
+} from './animations';
 
 const SLOW = 1200;
 export default function Pembuka({ setShowFooter }) {
   useEffect(() => {
     const playAudio = () => {
-      document.querySelector("#audio").play();
+      document.querySelector('#audio').play();
     };
-    initSlideLeft(".name_left", 360);
-    initSlideRight(".name_right", 360);
-    hidden(".pembuka");
-    fadeIn(".pembuka");
-    [".belongs_to", ".open_invitation", ".names_holder"].forEach((item) =>
+    initSlideLeft('.name_left', 360);
+    initSlideRight('.name_right', 360);
+    hidden('.pembuka');
+    fadeIn('.pembuka');
+    ['.belongs_to', '.open_invitation', '.names_holder'].forEach((item) =>
       initSlideTop(item)
     );
-    slideTop(".names_holder", () => {
-      slideLeft(".name_left");
-      slideRight(".name_right");
-      [".belongs_to", ".open_invitation"].forEach((item) => slideTop(item));
+    slideTop('.names_holder', () => {
+      slideLeft('.name_left');
+      slideRight('.name_right');
+      ['.belongs_to', '.open_invitation'].forEach((item) => slideTop(item));
     });
-    $(".btn1").on("click", function () {
+    $('.btn1').on('click', function () {
       slideDown(
-        ".btn1",
+        '.btn1',
         () => {
           playAudio();
           setShowFooter(true);
           animateMempelai();
-          window.location.href = "#mempelai";
+          window.location.href = '#mempelai';
         },
-        "300%"
+        '300%'
       );
     });
   });
@@ -65,12 +65,12 @@ export default function Pembuka({ setShowFooter }) {
       <div className="belongs_to text-center mb-3">
         <span className="yth d-block roboto">Kepada Yth:</span>
         <span className="name d-block roboto">Alumni SIF</span>
-        <img src="template_one/underline-nama.png" alt="Underline Penerima" />
+        <img src="/template_one/underline-nama.png" alt="Underline Penerima" />
       </div>
       <button className="btn btn-transparent rounded-pill px-5 py-2 shadow open_invitation salsa btn1">
         Buka Undangan
       </button>
-      <audio src="template_one/wedding.mp3" id="audio"></audio>
+      <audio src="/template_one/wedding.mp3" id="audio"></audio>
     </section>
   );
 }
