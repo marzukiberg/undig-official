@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
-import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Alur from './landing_page/Alur';
 import Contact from './landing_page/Contact';
 import Footer from './landing_page/Footer';

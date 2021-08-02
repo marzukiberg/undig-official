@@ -1,4 +1,4 @@
-export default H1 = ({ children, className }) => {
+const H1 = ({ children, className }) => {
   return (
     <h1
       className={
@@ -9,3 +9,4 @@ export default H1 = ({ children, className }) => {
     </h1>
   );
 };
+export default H1;

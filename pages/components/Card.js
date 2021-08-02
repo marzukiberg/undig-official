@@ -1,4 +1,4 @@
-export default Card = ({ children, className }) => {
+const Card = ({ children, className }) => {
   return (
     <div
       className={
@@ -11,3 +11,4 @@ export default Card = ({ children, className }) => {
     </div>
   );
 };
+export default Card;

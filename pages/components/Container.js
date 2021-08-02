@@ -1,4 +1,4 @@
-export default Container = ({ children, className }) => {
+const Container = ({ children, className }) => {
   return (
     <div
       className={
@@ -9,3 +9,4 @@ export default Container = ({ children, className }) => {
     </div>
   );
 };
+export default Container;

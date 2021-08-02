@@ -1,4 +1,3 @@
-import { Button, Row, Col } from 'react-bootstrap';
 import Card from '../components/Card';
 import Container from '../components/Container';
 import H1 from '../components/H1';
