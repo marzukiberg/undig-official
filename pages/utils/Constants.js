@@ -44,3 +44,4 @@ const slideLeft = {
 };
 
 export { fadeIn, slideRight, slideLeft, fadeInUp };
+export default () => <></>;
