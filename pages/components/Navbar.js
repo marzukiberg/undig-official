@@ -49,7 +49,7 @@ const Navbar = () => {
       ref={navbarRef}
     >
       <div className="container mx-auto flex items-center justify-between max-w-6xl">
-        <a href="#" className="p-2 rounded font-redressed text-xl font-bold">
+        <a href="#" className="p-2 rounded font-greatvb text-xl font-bold">
           Undig.id
         </a>
 
@@ -67,9 +67,7 @@ const Navbar = () => {
             className="sidebar fixed left-0 top-0 h-screen w-3/4 shadow-lg bg-white space-y-3 p-3 transform -translate-x-full duration-300 lg:static lg:p-0 lg:space-y-0 lg:h-auto lg:min-w-full lg:translate-x-0 lg:shadow-none"
           >
             <div className="text-center space-y-2 p-3 lg:hidden">
-              <span className="text-3xl font-bold font-redressed">
-                Undig.id
-              </span>
+              <span className="text-3xl font-bold font-greatvb">Undig.id</span>
               <span className="text-gray-500 font-quicksand block capitalize">
                 Buat Undangan Pernikahanmu Spesial bersama kami
               </span>

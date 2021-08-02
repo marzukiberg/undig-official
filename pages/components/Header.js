@@ -8,7 +8,7 @@ export default function Header({ title }) {
       <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Redressed&family=Roboto&family=Quicksand&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Great+Vibes&family=Redressed&family=Roboto&family=Quicksand&display=swap"
         rel="stylesheet"
       ></link>
 

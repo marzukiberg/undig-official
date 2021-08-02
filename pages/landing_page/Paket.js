@@ -66,7 +66,7 @@ const Paket = () => {
   return (
     <section className="paket" id="paket">
       <Container className="space-y-12">
-        <H1>Paket</H1>
+        <H1 className="mb-12">Paket</H1>
         <div className="grid gap-3 gap-y-12 md:grid-cols-3 lg:grid-cols-3">
           {paket.map((item, index) => (
             <Card key={index} className={'space-y-3 relative'}>

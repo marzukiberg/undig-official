@@ -61,11 +61,12 @@ html {
 .font-roboto {
   font-family: Roboto, sans-serif;
 }
-
+.font-greatvb {
+  font-family: 'Great Vibes', sans-serif;
+}
 .font-redressed {
   font-family: Redressed, sans-serif;
 }
-
 .font-poppins {
   font-family: Poppins, sans-serif;
 }
