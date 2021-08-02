@@ -1,90 +1,67 @@
-import React, { useEffect, useState } from "react";
-import $ from "jquery";
-import { animateMempelai } from "./mempelai";
-import { animateAcara } from "./acara";
-import { animateLoveStory } from "./love_story";
-import { animateGaleri } from "./galeri";
-import { animatePeta } from "./peta";
+import React from 'react';
 
-export default function Footer({ showFooter }) {
-  const [active, setActive] = useState({
-    mempelai: true,
-    acara: false,
-    loveStory: false,
-    galeri: false,
-    peta: false,
-    penutup: false,
-  });
-
-  useEffect(() => {
-    showFooter
-      ? $("footer").css({ display: "flex", bottom: -64 }).animate({ bottom: 0 })
-      : $("footer").css({ display: "none" });
-  });
-  const openMempelai = () => {
-    setActive({ mempelai: true });
-    animateMempelai();
-  };
-  const openAcara = () => {
-    setActive({ acara: true });
-    animateAcara();
-  };
-  const openLoveStory = () => {
-    setActive({ loveStory: true });
-    animateLoveStory();
-  };
-  const openGaleri = () => {
-    setActive({ galeri: true });
-    animateGaleri();
-  };
-  const openPeta = () => {
-    setActive({ peta: true });
-    animatePeta();
-  };
+const BottomLink = ({
+  href = '#',
+  onClick = () => console.log('link'),
+  className = '',
+  img,
+}) => {
   return (
-    <footer>
-      <a
-        href="#mempelai"
-        className={active.mempelai ? "active" : ""}
-        onClick={openMempelai}
-      >
-        <img src="template_one/icon-mempelai.svg" alt="Footer Icon" />
-      </a>
-      <a
-        href="#acara"
-        className={active.acara ? "active" : ""}
-        onClick={openAcara}
-      >
-        <img src="template_one/icon-acara.svg" alt="Footer Icon" />
-      </a>
-      <a
-        href="#love_story"
-        className={active.loveStory ? "active" : ""}
-        onClick={openLoveStory}
-      >
-        <img src="template_one/icon-love-story.svg" alt="Footer Icon" />
-      </a>
-      <a
-        href="#galeri"
-        className={active.galeri ? "active" : ""}
-        onClick={openGaleri}
-      >
-        <img src="template_one/icon-galeri.svg" alt="Footer Icon" />
-      </a>
-      <a
-        href="#peta"
-        className={active.peta ? "active" : ""}
-        onClick={openPeta}
-      >
-        <img src="template_one/icon-peta.svg" alt="Footer Icon" />
-      </a>
-      <a
-        href="#penutup"
-        className={active.penutup ? "active" : ""}
-        onClick={() => setActive({ penutup: true })}
-      >
-        <img src="template_one/icon-penutup.svg" alt="Footer Icon" />
-      </a>
+    <a
+      href="#"
+      onClick={onClick}
+      className={`flex-grow h-12 flex items-center justify-center duration-300 hover:bg-blue-500 hover:bg-opacity-50 ${className}`}
+    >
+      <img src={`template_one/${img}`} alt="Footer Icon" />
+    </a>
+  );
+};
+
+export default function Footer({ pageindex, setpageindex }) {
+  return (
+    <footer
+      id="template-one"
+      className="flex fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm mx-auto "
+      style={{
+        boxShadow: 'inset 4px 0 4px rgba(0,0,0,0.5)',
+      }}
+    >
+      <BottomLink
+        href="#"
+        onClick={() => setpageindex(1)}
+        className={pageindex === 1 && 'bg-blue-500 bg-opacity-50'}
+        img="icon-mempelai.svg"
+      />
+      <BottomLink
+        href="#"
+        onClick={() => setpageindex(2)}
+        className={pageindex === 2 && 'bg-blue-500 bg-opacity-50'}
+        img="icon-acara.svg"
+      />
+      <BottomLink
+        href="#"
+        onClick={() => setpageindex(3)}
+        className={pageindex === 3 && 'bg-blue-500 bg-opacity-50'}
+        img="icon-love-story.svg"
+      />
+      <BottomLink
+        href="#"
+        onClick={() => setpageindex(4)}
+        className={pageindex === 4 && 'bg-blue-500 bg-opacity-50'}
+        img="icon-galeri.svg"
+      />
+      <BottomLink
+        href="#"
+        onClick={() => setpageindex(5)}
+        className={pageindex === 5 && 'bg-blue-500 bg-opacity-50'}
+        img="icon-peta.svg"
+      />
+      <BottomLink
+        href="#"
+        onClick={() => setpageindex(6)}
+        className={pageindex === 6 && 'bg-blue-500 bg-opacity-50'}
+        img="icon-penutup.svg"
+      />
     </footer>
   );
 }

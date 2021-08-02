@@ -1,42 +1,51 @@
 .penutup {
-  background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 1)
-    ),
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1)),
     url(../public/template_one/bg-s6.jpg);
-  @include bgFitLeft;
+  padding: 32px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  .t1 {
-    font-size: 14px;
+  .header {
+    p {
+      font-family: "Quicksand", sans-serif;
+      font-size: 14px;
+    }
+    p:nth-child(1) {
+      text-align: center;
+    }
+    p:nth-child(2) {
+      text-align: justify;
+    }
+
+    border-bottom: 1px solid black;
+    margin-bottom: 21px;
   }
-  .t2 {
-    text-shadow: 0px 0px 2px $dark;
-    font-size: 18px;
-  }
-  .t3 {
-    font-size: 14px;
-  }
-  .t4 {
-    font-size: 14px;
-    background-color: rgba($color: #bdccd3, $alpha: 0.43);
-    padding: 4px;
-  }
-  .btn1 {
-    background-color: #bdccd3;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 4px 4px $dark inset, 0 4px 4px $dark;
-  }
-  .social-media {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    .social-icon {
-      color: rgba($color: black, $alpha: 1);
-      &:hover {
-        text-decoration: none;
+
+  .content {
+    text-align: center;
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 21px;
+    }
+    .btn {
+      background: $yellow;
+      border: 1px solid white;
+      font-weight: bold;
+      font-family: Quicksand, sans-serif;
+    }
+    .invitation__by {
+      font-family: Quicksand, sans-serif;
+      background: rgba(white, 0.5);
+    }
+
+    .social {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 32px;
+      margin-bottom: 32px;
+      span {
+        font-family: Poppins, sans-serif;
         font-weight: bold;
       }
     }

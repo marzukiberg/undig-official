@@ -1,124 +1,53 @@
+$dark: rgba(0, 0, 0, 0.5);
+$darkpink: #de2568;
+$pink: #fb9db1;
+$yellow: #e0b048;
+$greenv1: #a9bfa0;
+$greenv2: #6b8866;
+
 .template_one {
-  $dark: rgba(0, 0, 0, 0.5);
-  $darkpink: #de2568;
-  $pink: #fb9db1;
-  $yellow: #e0b048;
-  $greenv1: #a9bfa0;
-  $greenv2: #6b8866;
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  html {
-    scroll-behavior: smooth;
-  }
-  @mixin bgFitRight {
-    background-size: cover;
-    background-position: right;
-  }
-  @mixin bgFitCenter {
-    background-size: cover;
-    background-position: center;
-  }
-  @mixin bgFitLeft {
-    background-size: cover;
-    background-position: left;
-  }
-  @mixin mq($size) {
-    @media only screen and(max-width: $size) {
-      @content;
-    }
+  .btn-rounded {
+    border-radius: 32px !important;
   }
   main {
-    display: flex;
-    position: relative;
-    scroll-behavior: smooth;
-    flex-direction: row;
+    max-width: 540px;
+    height: 100vh;
     margin: 0 auto;
-    width: 360px;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    @include mq(540px) {
-      width: 100%;
-    }
-  }
-  .with_scroll {
-    min-height: 100vh;
-    min-width: 100%;
-    section {
-      overflow-y: scroll;
-    }
   }
   section {
-    min-width: 360px;
-    max-height: 100vh;
-    @include mq(540px) {
-      min-width: 100%;
-    }
-    overflow-y: hidden;
-    scroll-snap-align: start;
-    .title {
-      font-size: 30px;
-      text-align: center;
-      font-weight: bold;
-    }
-    .section_frame {
-      position: relative;
-      text-align: center;
-      max-width: inherit;
-      border-radius: 32px;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      box-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.3) inset;
-      margin: 12px;
-      margin-top: 64px;
-      padding: 12px;
-      padding-top: 64px;
-      min-height: 80vh;
-      min-width: 300px;
-      &::after {
-        content: "";
-        background-image: url(../public/template_one/top-frame-s2.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 144px;
-        position: absolute;
-        top: -64px;
-        left: 0;
-        z-index: 1;
-      }
-    }
-  }
-  footer {
-    position: fixed;
-    bottom: 0;
-    box-shadow: 0 0 1px $dark;
-    background-color: rgba($color: #fff, $alpha: 0.3);
-    height: 48px;
-    width: 360px;
-    @include mq(540px) {
-      min-width: 100%;
-    }
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-    a.active {
-      background-color: #8fc3e9;
-      box-shadow: 0px 4px 4px $dark inset;
-    }
+    min-height: 100vh;
+    padding: 0 !important;
   }
 
   @import "pembuka";
   @import "mempelai";
   @import "acara";
-  @import "galeri";
   @import "love_story";
+  @import "galeri";
   @import "peta";
   @import "penutup";
+
+  footer#template-one {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background: rgba(white, 0.7);
+    a {
+      flex-grow: 1;
+      text-align: center;
+      height: 54px;
+      line-height: 54px;
+      &:hover,
+      &.active {
+        background: rgba(#000, 0.1);
+      }
+    }
+  }
 }
-@import "fonts";

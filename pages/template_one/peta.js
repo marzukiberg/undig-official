@@ -1,92 +1,89 @@
-import Head from "next/head";
-import React, { useEffect } from "react";
-import $ from "jquery";
-import { fadeIn, hidden, initPopup, showPopup } from "./animations";
+import Head from 'next/head';
+import React, { useEffect, useRef } from 'react';
+import { BackgroundImage } from '../components/BackgroundImage';
+import ContainerTemplate from '../components/ContainerTemplate';
 
-export const animatePeta = () => {
-  initPopup(".peta .section_frame");
-  hidden(".map");
-  showPopup(".peta .section_frame", () => {
-    fadeIn(".map");
-  });
-};
 export default function Peta() {
+  const mapRef = useRef();
+  const mapLinkRef = useRef();
   useEffect(() => {
-    animatePeta();
-    setTimeout(() => {
+    let mounted = true;
+    if (mounted) {
       initMap();
-    }, 2000);
+    }
+    return () => {
+      mounted = false;
+    };
   }, []);
+
   const initMap = async () => {
     const lat = 0.4709833,
       long = 101.38293,
-      mymap = await L.map("map").setView([lat, long], 14),
+      mymap = await L.map(mapRef.current).setView([lat, long], 14),
       accessToken =
-        "pk.eyJ1IjoibWFyenVraWJlcmciLCJhIjoiY2tmcm4xbnlpMGV0cDJwbnBkbXN0ZGZtOSJ9.t_s6XqB0K2keyQMx349FPA",
-      mapLink = $("#mapLink");
+        'pk.eyJ1IjoibWFyenVraWJlcmciLCJhIjoiY2tmcm4xbnlpMGV0cDJwbnBkbXN0ZGZtOSJ9.t_s6XqB0K2keyQMx349FPA';
 
-    await mapLink.attr(
-      "href",
+    await mapLinkRef.current.setAttribute(
+      'href',
       `https://www.google.com/maps/@${lat},${long},15z`
     );
     await L.tileLayer(
-      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
       {
         attribution:
           'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
-        id: "mapbox/streets-v11",
+        id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
         accessToken: accessToken,
       }
     ).addTo(mymap);
-    // add marker
+
     await L.marker([lat, long]).addTo(mymap);
   };
 
   return (
-    <>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        />
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-      </Head>
-      <section id="peta" className="peta with_frame d-flex flex-column">
-        <div className="section_frame">
-          <span className="title salsa">Peta Lokasi</span>
+    <section id="peta" className="peta relative">
+      <BackgroundImage noOverlay src="/template_one/bg-section-6.png" />
+
+      <ContainerTemplate>
+        <div className="header text-center font-quicksand space-y-3">
           <img
-            src="template_one/love-story-underline.svg"
-            alt="Underline Lokasi"
-            className="img-fluid lokas_underline mb-3"
+            src="template_one/title-section-6.png"
+            alt="Title"
+            className="w-1/2 block mx-auto"
           />
-          <div className="text-center mb-3">
-            <span
-              className="font-weight-bold d-block roboto"
-              style={{ fontSize: 14 }}
-            >
-              Kediaman Mempelai Wanita
-            </span>
-            <span className="d-block roboto" style={{ fontSize: 14 }}>
-              Jalan Bina Keluarga
-            </span>
+          <img
+            src="template_one/underline-3.png"
+            alt="Underline Lokasi"
+            className="w-1/2 block mx-auto"
+          />
+          <div className="text-center space-y-2 font-roboto">
+            <span className="font-bold block">Kediaman Mempelai Wanita</span>
+            <span>Jalan Bina Keluarga</span>
           </div>
-          <div id="map" className="map mb-3" style={{ height: 300 }} />
-          <div className="d-block mx-auto roboto" style={{ fontSize: 14 }}>
-            Lihat di{" "}
+        </div>
+
+        <div className="content space-y-3">
+          <div
+            id="map"
+            ref={mapRef}
+            className="map w-full h-80 rounded-xl shadow-lg"
+          />
+          <div className="text-center font-roboto">
+            Lihat di{' '}
             <a
               href="#"
-              id="mapLink"
+              ref={mapLinkRef}
               target="_blank"
-              className="link text-primary"
+              className="text-pink-500"
             >
               Google Maps
             </a>
           </div>
         </div>
-      </section>
-    </>
+      </ContainerTemplate>
+    </section>
   );
 }

@@ -1,16 +1,71 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: 'Salsa';
+  src: url('/fonts/Salsa/Salsa-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Times New Roman';
+  src: url('/fonts/Times_New_Roman_Font_Family/Times\ New\ Roman\ 400.ttf');
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: 'Alex Brush';
+  src: url('/fonts/Alex_Brush/AlexBrush-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf');
+}
+@font-face {
+  font-family: 'Calibri';
+  src: url('/fonts/Calibri/Calibri\ Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Segoe Print';
+  src: url('/fonts/Segoe\ Print/segoepr.ttf');
+}
+.font-salsa {
+  font-family: 'Salsa', sans-serif;
+}
+.font-tnr {
+  font-family: 'Times New Roman', Times, serif;
+}
+.font-alex {
+  font-family: 'Alex Brush', sans-serif;
+}
+.font-averia {
+  font-family: 'Averia Serif Libre', sans-serif;
+}
+.font-calibri {
+  font-family: Calibri, sans-serif;
+}
+.font-segoe {
+  font-family: 'Segoe Print', sans-serif;
+}
+.font-quicksand {
+  font-family: Quicksand, sans-serif;
+}
+.font-roboto {
+  font-family: Roboto, sans-serif;
+}
+
+.font-redressed {
+  font-family: Redressed, sans-serif;
+}
+
+.font-poppins {
+  font-family: Poppins, sans-serif;
 }

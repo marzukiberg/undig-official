@@ -1,45 +1,16 @@
 .paket {
-  $bronze: #cd7f32;
-
-  .card {
-    border-radius: 32px;
-    &:nth-child(1),
-    &:nth-child(3) {
-      float: left;
-      margin-bottom: 32px;
-      width: 50%;
-      @include size(760px) {
-        float: none;
-        clear: both;
-        width: 80%;
-        margin-bottom: 0;
-      }
-    }
-    &:nth-child(2) {
-      width: 45%;
-      float: right;
-      margin-top: 45%;
-      transition: 0.5s;
-      @include size(760px) {
-        width: 80%;
-        float: none;
-        margin-top: 0;
-        margin-left: 20%;
-      }
-    }
-    ul li {
-      font-size: 14px;
-    }
-    .title,
-    .price {
-      @include size(760px) {
-        font-size: 20px;
-      }
+  .card-title {
+    font-size: 32px;
+    margin-bottom: 21px;
+    font-weight: bold;
+  }
+  ul {
+    list-style: none !important;
+    li {
+      margin-bottom: 14px;
     }
   }
-  img {
-    @include size(760px) {
-      display: none;
-    }
+  .price {
+    font-family: "Roboto", sans-serif;
   }
 }

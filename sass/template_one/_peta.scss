@@ -1,18 +1,30 @@
-.peta {
-  background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 1)
-    ),
-    url(../public/template_one/bg-s5.jfif);
-  @include bgFitLeft;
-  background-position-x: -200px;
-  .map {
-    border-radius: 32px;
+#peta {
+  background: linear-gradient(to top, rgba(white, 0.1), rgba(white, 1)), url(../public/template_one/bg-s5.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 32px !important;
+
+  .header {
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
-  .link {
-    &:hover {
-      text-decoration: none;
+  .content {
+    text-align: center;
+    .map {
+      border-radius: 32px;
+      box-shadow: 0 0 4px rgba(black, 0.5);
+    }
+    .link {
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }

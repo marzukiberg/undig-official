@@ -9,12 +9,12 @@
   }
 
   .card {
-    border-radius: 32px;
-  }
+    border-radius: 12px;
 
-  .template_img {
-    max-height: 300px;
-    object-fit: contain;
-    cursor: zoom-in;
+    .card-img {
+      max-height: 300px;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
   }
 }

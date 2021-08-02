@@ -1,81 +1,70 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { hidden, fadeIn, initSlideRight, slideRight } from "./animations";
-import Modal from "react-modal";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
+import React, { useState } from 'react';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import Modal from 'react-modal';
+import { BackgroundImage } from '../components/BackgroundImage';
+import ContainerTemplate from '../components/ContainerTemplate';
 
-export const animateGaleri = () => {
-  initSlideRight(".galeri .title");
-  hidden(".galeri .section_img");
-  slideRight(".galeri .title", () => {
-    fadeIn(".galeri .section_img");
-  });
-};
 export default function Galeri() {
-  useEffect(animateGaleri);
   const [modalGallery, showModalGallery] = useState(false);
 
   const images = [
     {
-      original: "template_one/gallery-1.jpg",
-      thumbnail: "template_one/gallery-1.jpg",
+      original: 'template_two/galeri (1).png',
+      thumbnail: 'template_two/galeri (1).png',
     },
     {
-      original: "template_one/gallery-2.jfif",
-      thumbnail: "template_one/gallery-2.jfif",
+      original: 'template_two/galeri (2).png',
+      thumbnail: 'template_two/galeri (2).png',
     },
     {
-      original: "template_one/gallery-3.jfif",
-      thumbnail: "template_one/gallery-3.jfif",
+      original: 'template_two/galeri (3).png',
+      thumbnail: 'template_two/galeri (3).png',
     },
     {
-      original: "template_one/gallery-4.jfif",
-      thumbnail: "template_one/gallery-4.jfif",
+      original: 'template_two/galeri (4).png',
+      thumbnail: 'template_two/galeri (4).png',
     },
     {
-      original: "template_one/gallery-5.jfif",
-      thumbnail: "template_one/gallery-5.jfif",
+      original: 'template_two/galeri (5).png',
+      thumbnail: 'template_two/galeri (5).png',
     },
   ];
-  const customStyles = {
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-    },
-  };
 
   return (
-    <div className="with_scroll">
+    <>
       <Modal
         isOpen={modalGallery}
         onRequestClose={() => showModalGallery(false)}
-        style={customStyles}
+        className="max-w-sm mx-auto h-screen table"
         contentLabel="Modal Galeri"
       >
-        <ImageGallery items={images} lazyLoad />
+        <div className="table-cell align-middle max-w-sm bg-white bg-opacity-50">
+          <ImageGallery items={images} lazyLoad />
+        </div>
       </Modal>
-      <section id="galeri" className="galeri with_frame pb-5">
-        <div className="section_frame">
-          <span className="title segoe-print mb-3">You & Me</span>
-          <div className="section_img">
+      <section id="galeri" className="galeri relative">
+        <BackgroundImage noOverlay src="/template_one/bg-section-5.png" />
+
+        <ContainerTemplate>
+          <div className="header text-center font-quicksand space-y-3">
+            <h1 className="text-center font-segoe text-2xl text-white">
+              You & Me
+            </h1>
+          </div>
+          <div className="content space-y-3">
             {images.map((item, index) => (
               <img
                 key={index}
                 src={`${item.original}`}
                 alt={`Galeri ${index + 1}`}
-                className="img-fluid galeri_image mb-3"
-                style={{ cursor: "pointer" }}
+                className="rounded-xl w-72 h-72 object-cover cursor-pointer block mx-auto duration-300 transform hover:-translate-y-1"
                 onClick={() => showModalGallery(true)}
               />
             ))}
           </div>
-        </div>
+        </ContainerTemplate>
       </section>
-    </div>
+    </>
   );
 }

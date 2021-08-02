@@ -1,16 +1,15 @@
 .love_story {
-  background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 1)
-    ),
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1)),
     url(../public/template_one/bg-s4.jpg);
-  @include bgFitCenter;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 32px !important;
 
   @mixin pinkCircle {
     content: "";
     position: absolute;
-    top: 24px;
+    top: 28px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -20,19 +19,30 @@
   @mixin timelineBoxEmbel {
     content: "";
     position: absolute;
-    top: 14px;
-    width: 24px;
-    height: 24px;
-    background-color: white;
+    top: 21px;
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-right: 20px solid white;
+    border-bottom: 14px solid transparent;
   }
 
-  .title {
-    color: $pink;
+  .header {
+    text-align: center;
+    h1 {
+      font-size: 2rem;
+      color: $pink;
+      margin-bottom: 14px;
+    }
+    img {
+      width: 75%;
+    }
+    p {
+      text-align: justify;
+      font-family: "Quicksand", sans-serif;
+      margin-bottom: 32px;
+    }
   }
-  .dalil {
-    font-size: 12px;
-  }
-
   .timeline {
     width: 50%;
     display: flex;
@@ -46,9 +56,12 @@
       h2 {
         font-size: 18px;
         margin-bottom: 4px;
+        font-family: Roboto, sans-serif !important;
+        margin-bottom: 12px;
       }
       p {
-        font-size: 10px;
+        font-size: 12px;
+        font-family: Roboto, sans-serif !important;
       }
     }
     &.left {
@@ -60,8 +73,8 @@
       }
       .timeline-box {
         &::after {
-          right: 0;
-          transform: rotate(45deg) translateX(30%);
+          right: -20px;
+          transform: rotate(180deg);
           @include timelineBoxEmbel();
         }
       }
@@ -79,8 +92,7 @@
       }
       .timeline-box {
         &::after {
-          left: 0;
-          transform: rotate(45deg) translateX(-30%);
+          left: -20px;
           @include timelineBoxEmbel();
         }
       }

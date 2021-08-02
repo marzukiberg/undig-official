@@ -1,11 +1,6 @@
 .penutup {
-  background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 1)
-    ),
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1)),
     url(../public/template_two/bg-6.png);
-  @include bgFitLeft;
 
   .t1 {
     font-size: 14px;

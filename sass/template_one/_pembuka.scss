@@ -1,56 +1,91 @@
-.pembuka {
-  background-image: url(../public/template_one/bg.jpg);
-  @include bgFitRight;
-  overflow-y: hidden;
-
-  .title {
-    color: $pink;
+#pembuka {
+  position: relative;
+  background: linear-gradient(to top, rgba(white, 0.5), rgba(white, 0.1));
+  min-height: 100vh;
+  .background {
+    position: fixed;
+    max-width: 540px;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+    z-index: -1;
   }
-
-  .names_holder {
-    position: relative;
+  .content {
+    min-height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    div {
-      position: absolute;
+    position: relative;
+    padding: 32px;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 32px;
+      color: $pink;
+      font-weight: 100;
+    }
+    .content__names-holder {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      .content__names-background {
+        width: 100%;
+      }
+      .content__names {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        span {
+          display: block;
+          font-size: 48px;
+          line-height: 48px;
+          color: $pink;
+          text-shadow: -2px 2px 0px $darkpink;
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+          &:nth-child(2) {
+            color: $darkpink;
+            text-shadow: -2px 2px 0px $pink;
+          }
+          &:nth-child(3) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .content__belongs {
+      text-align: center;
       span {
+        font-family: "Roboto", sans-serif;
+        &:nth-child(1) {
+          font-size: 18px;
+        }
         display: block;
-        font-size: 48px;
-        line-height: 42px;
       }
-      .and {
-        margin-left: 32px;
-        color: $darkpink;
-      }
-      .name_left {
-        margin-left: -48px;
-        color: $pink;
-        text-shadow: -2px -2px 2px $darkpink;
-      }
-      .name_right {
-        margin-right: -48px;
-        color: $pink;
-        text-shadow: -2px -2px 2px $darkpink;
+      img {
+        display: block;
+        margin: 21px;
       }
     }
-  }
 
-  .belongs_to {
-    .yth {
-      font-size: 20px;
-    }
-    .name {
-      font-size: 16px;
-    }
-  }
-
-  .open_invitation {
-    border-color: $pink;
-    color: $pink;
-    transition: 0.3s;
-    &:hover {
-      background-color: rgba($color: #fff, $alpha: 0.4);
+    .btn {
+      background: $pink !important;
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 14px;
+      color: white;
+      transition: 0.3s;
+      &:hover {
+        background: #fff !important;
+        text-decoration: none;
+        font-weight: bold;
+        color: $pink;
+        box-shadow: 0 0 8px $pink;
+      }
     }
   }
 }

@@ -1,60 +1,69 @@
-.acara {
-  background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 1)
-    ),
+#acara {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 1)),
     url(../public/template_one/bg-s3.jpg);
-  @include bgFitCenter;
+  padding: 32px !important;
 
-  .date_frame {
-    .date_holder {
+  .header {
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 21px;
+      font-family: Salsa, sans-serif;
+    }
+  }
+
+  .date__frame {
+    .date__holder {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 auto;
-      width: 86px;
-      height: 86px;
+      width: 80px;
+      height: 80px;
       background-color: white;
       border: 8px solid $yellow;
       border-radius: 50%;
-      .big_date {
-        font-size: 36px;
+      .big__date {
+        font-size: 32px;
       }
-      .day_holder {
+      .day__holder {
         position: absolute;
-        top: 46px;
+        top: 50%;
+        transform: translateY(-50%);
         &.left {
-          left: -18px;
-          transform: translate(-100%, -50%);
+          text-align: center;
+          left: -80px;
+          width: 100%;
         }
         &.right {
-          right: -18px;
-          transform: translate(100%, -50%);
+          text-align: center;
+          right: -80px;
+          width: 100%;
         }
-        .dh_first {
+        .dh__first {
+          font-family: "Roboto", sans-serif;
           font-size: 18px;
         }
-        .dh_second {
+        .dh__second {
           font-size: 14px;
-          font-family: "Calibri";
+          font-family: "Calibri", sans-serif;
         }
       }
     }
   }
 
-  .countdown_timer {
+  .countdown__timer {
     font-size: 14px;
     .text-yellow {
       color: $yellow;
     }
     .countdown {
       background-color: white;
-      width: 48px;
       border-radius: 4px;
-      padding-top: 4px;
+      width: 48px;
       box-shadow: 0 0 4px $dark inset;
+      text-align: center;
       .time {
         line-height: 32px;
         font-size: 32px;
