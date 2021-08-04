@@ -27,7 +27,7 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
 
         <ContainerTemplate noFrame>
           <motion.h1
-            className="text-center font-salsa text-2xl text-pink-500"
+            className="text-center font-salsa text-3xl text-pink-500"
             variants={fadeIn}
           >
             The Wedding Of

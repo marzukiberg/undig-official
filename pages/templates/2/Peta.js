@@ -48,7 +48,7 @@ export default function Peta() {
       id="peta"
       className="peta relative"
     >
-      <BackgroundImage noOverlay src="/templates/1/background/6.png" />
+      <BackgroundImage src="/templates/2/background/6.png" />
 
       <ContainerTemplate>
         <motion.div
@@ -56,12 +56,12 @@ export default function Peta() {
           className="header text-center font-quicksand space-y-3"
         >
           <img
-            src="/templates/1/embel/title-section-6.png"
+            src="/templates/2/embel/title-section-6.png"
             alt="Title"
             className="w-1/2 block mx-auto"
           />
           <img
-            src="/templates/1/embel/underline-3.png"
+            src="/templates/2/embel/underline-3.png"
             alt="Underline Lokasi"
             className="w-1/2 block mx-auto"
           />

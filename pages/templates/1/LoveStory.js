@@ -19,7 +19,7 @@ export default function LoveStory() {
         <div className="header text-center font-roboto space-y-3 text-sm">
           <motion.h1
             variants={fadeIn}
-            className="text-center font-segoe text-white text-2xl"
+            className="text-center font-segoe text-white text-3xl"
           >
             Love Story
           </motion.h1>

@@ -20,7 +20,7 @@ export default function Penutup() {
       id="penutup"
       className="penutup relative"
     >
-      <BackgroundImage src="/templates/1/background/7.png" />
+      <BackgroundImage src="/templates/2/background/7.png" />
 
       <ContainerTemplate>
         <motion.div
@@ -45,14 +45,14 @@ export default function Penutup() {
             <span>Turut Berbahagia</span>
             <span>Segenap Keluarga Besar</span>
           </div>
-          <div className="font-segoe font-bold text-2xl">
+          <div className="font-segoe font-bold text-2xl text-green700">
             ~ Raihan <span className="text-dark">&</span> Rahma ~
           </div>
           <p className="font-quicksand text-sm">
             Tekan tombol konfirmasi di bawah ini! Dan pastikan kehadiran kamu
           </p>
           <button
-            className="block mx-auto px-6 py-2 bg-pink-500 rounded-lg shadow-lg text-white font-poppins hover:bg-pink-700 duration-300"
+            className="block mx-auto px-6 py-2 bg-green700 rounded-lg shadow-lg text-white font-poppins duration-300"
             onClick={toggleModal}
           >
             Konfirmasi Kehadiran
@@ -61,7 +61,7 @@ export default function Penutup() {
           <div className="space-y-3 font-quicksand text-sm">
             <div className="bg">
               Website Invitation Supported By <br />
-              <span className="text-pink-500 font-bold cursor-pointer">
+              <span className="text-green700 font-bold cursor-pointer">
                 Undig Official
               </span>
             </div>
@@ -71,7 +71,7 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="/templates/1/whatsapp.svg" alt="Whatsapp" />
+                <Image src="/templates/2/whatsapp.svg" alt="Whatsapp" />
                 <span className="d-block">082286062083</span>
               </a>
 
@@ -80,7 +80,7 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="/templates/1/instagram.svg" alt="Instagram" />
+                <Image src="/templates/2/instagram.svg" alt="Instagram" />
                 <span className="d-block">undig_official</span>
               </a>
             </div>

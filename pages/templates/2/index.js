@@ -35,7 +35,7 @@ export default function index() {
   ];
 
   return (
-    <div className="template_one">
+    <div>
       <audio src="/wedding.mp3" ref={audioRef}></audio>
       <Header title="Raihan dan Rahma" />
 
@@ -48,7 +48,7 @@ export default function index() {
               <span
                 {...restProps}
                 ref={elementRef}
-                className="trackY bg-pink-100"
+                className="trackY bg-green-100"
               />
             );
           },
@@ -60,7 +60,7 @@ export default function index() {
               <span
                 {...restProps}
                 ref={elementRef}
-                className="thumbY bg-pink-300"
+                className="thumbY bg-green-300"
               />
             );
           },

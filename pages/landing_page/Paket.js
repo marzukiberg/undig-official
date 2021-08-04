@@ -1,6 +1,7 @@
 import Card from '../components/Card';
 import Container from '../components/Container';
 import H1 from '../components/H1';
+import classess from './Paket.module.css'
 
 const Paket = () => {
   const paket = [
@@ -88,13 +89,13 @@ const Paket = () => {
                   );
                 })}
               </ul>
-              <div className="group cursor-pointer hidden md:block">
+              <div className={`group cursor-pointer hidden md:block ${classess.card__paket}`}>
                 <span className="text-pink-500 block text-center transform">
                   Selengkapnya...
                 </span>
 
-                <Card className="absolute left-0 top-0 p-6 transform duration-300 scale-0 group-focus:scale-100">
-                  <ul className="space-y-3 md:space-y-1">
+                <Card className={`absolute left-1/2 bottom-0 p-6 transform -translate-x-1/2 w-full scale-0 duration-300 group-hover:scale-100 ${classess.card__list}`}>
+                  <ul className="space-y-3 md:space-y-1 origin-bottom">
                     {item.fitur.map((li, index) => {
                       return (
                         <li key={index} className="flex items-center space-x-3">

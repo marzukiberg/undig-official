@@ -3,6 +3,7 @@ import React from 'react';
 import BackgroundImage from '../../components/BackgroundImage';
 import ContainerTemplate from '../../components/ContainerTemplate';
 import { fadeIn } from '../../utils/Constants';
+import classess from './Pembuka.module.css'
 
 export default function Pembuka({ setpageindex, toggleAudio }) {
   const bukaUndangan = () => {
@@ -20,14 +21,14 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
         animate="show"
       >
         <BackgroundImage
-          src="/templates/1/background/1.png"
+          src="/templates/2/background/1.png"
           className="object-right"
           noOverlay
         />
 
         <ContainerTemplate noFrame>
           <motion.h1
-            className="text-center font-salsa text-2xl text-pink-500"
+            className="text-center font-salsa text-3xl text-green700"
             variants={fadeIn}
           >
             The Wedding Of
@@ -38,14 +39,14 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
             variants={fadeIn}
           >
             <img
-              src="/templates/1/embel/frame-nama.png"
+              src="/templates/2/embel/frame-nama.png"
               alt="Frame Nama"
               className="content__names-background h-full block mx-auto object-contain"
             />
-            <div className="content__names text-center w-full text-4xl text-pink-500 absolute top-1/2 left-0 transform -translate-y-1/2 font-salsa font-bold">
-              <div className="">Raihan</div>
-              <div className="">&</div>
-              <div className="">Rahma</div>
+            <div className="content__names text-center w-full text-5xl text-green300 absolute top-1/2 left-0 transform -translate-y-1/2 font-salsa font-bold">
+              <div className={classess.content__name}>Raihan</div>
+              <div className={classess.content__name}>&</div>
+              <div className={classess.content__name}>Rahma</div>
             </div>
           </motion.div>
 
@@ -60,13 +61,13 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
             </div>
             <motion.img
               variants={fadeIn}
-              src="/templates/1/embel/underline-nama.png"
+              src="/templates/2/embel/underline-nama.png"
               alt="Underline"
               className="w-1/2 object-contain block mx-auto mb-6"
             />
             <motion.button
               variants={fadeIn}
-              className="rounded-full py-2 px-6 bg-pink-200 border text-pink-500 border-pink-500 font-salsa shadow-xl duration-300  hover:bg-pink-500 hover:text-white"
+              className="rounded-full py-2 px-6 bg-green200 border-2 text-white border-green700 font-salsa shadow-xl duration-300  hover:bg-green700 hover:text-white"
               onClick={bukaUndangan}
             >
               Buka Undangan

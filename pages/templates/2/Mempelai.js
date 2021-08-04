@@ -13,7 +13,7 @@ export default function Mempelai() {
       id="mempelai"
       className="relative"
     >
-      <BackgroundImage src="/templates/1/background/2.png" />
+      <BackgroundImage src="/templates/2/background/2.png" />
 
       <ContainerTemplate>
         <motion.div
@@ -22,7 +22,7 @@ export default function Mempelai() {
         >
           <motion.img
             variants={fadeIn}
-            src="/templates/1/embel/bismillah.png"
+            src="/templates/2/embel/bismillah.png"
             alt="Bismillah"
             className="w-1/2 block mx-auto"
           />
@@ -42,7 +42,7 @@ export default function Mempelai() {
           >
             <div>
               <img
-                src="/templates/1/mempelai/pria.png"
+                src="/templates/2/mempelai/pria.png"
                 className="w-32 h-full rounded-xl shadow-lg
                 transform group-hover:-translate-y-3 duration-300"
               />
@@ -52,7 +52,7 @@ export default function Mempelai() {
                 Raihan bin Alfajri
               </h2>
               <img
-                src="/templates/1/embel/underline-nama-mempelai.png"
+                src="/templates/2/embel/underline-nama-mempelai.png"
                 className="underline w-full"
               />
               <div className="space-y-0 font-quicksand">
@@ -73,7 +73,7 @@ export default function Mempelai() {
                 Rahma binti Abdullah
               </h2>
               <img
-                src="/templates/1/embel/underline-nama-mempelai.png"
+                src="/templates/2/embel/underline-nama-mempelai.png"
                 className="underline w-full"
               />
               <div className="space-y-0 font-quicksand">
@@ -83,7 +83,7 @@ export default function Mempelai() {
             </div>
             <div>
               <img
-                src="/templates/1/mempelai/wanita.png"
+                src="/templates/2/mempelai/wanita.png"
                 className="w-32 h-full rounded-xl shadow-lg transform group-hover:-translate-y-3 duration-300"
               />
             </div>

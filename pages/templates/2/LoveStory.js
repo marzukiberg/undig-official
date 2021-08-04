@@ -13,19 +13,19 @@ export default function LoveStory() {
       id="love_story"
       className="love_story relative"
     >
-      <BackgroundImage src="/templates/1/background/4.png" />
+      <BackgroundImage src="/templates/2/background/4.png" />
 
       <ContainerTemplate>
         <div className="header text-center font-roboto space-y-3 text-sm">
           <motion.h1
             variants={fadeIn}
-            className="text-center font-segoe text-white text-2xl"
+            className="text-center font-segoe text-white text-3xl"
           >
             Love Story
           </motion.h1>
           <motion.img
             variants={fadeIn}
-            src="/templates/1/embel/underline-3.png"
+            src="/templates/2/embel/underline-3.png"
             alt="Underline 3"
             className="w-1/2 block mx-auto"
           />
@@ -60,7 +60,7 @@ export default function LoveStory() {
               </motion.div>
 
               <div className="absolute h-full w-1 bg-gray-700 rounded-t-full left-1/2 transform -translate-x-1/2 z-10">
-                <div className="absolute w-4 h-12 rounded-full bg-pink-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="absolute w-4 h-12 rounded-full bg-green300 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
               </div>
 
               <motion.div
@@ -99,7 +99,7 @@ export default function LoveStory() {
               </motion.div>
 
               <div className="absolute h-full w-1 bg-gray-700 rounded-b-full left-1/2 transform -translate-x-1/2 z-10">
-                <div className="absolute w-4 h-12 rounded-full bg-pink-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="absolute w-4 h-12 rounded-full bg-green300 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
               </div>
               <motion.div
                 variants={slideLeft}

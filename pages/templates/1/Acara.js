@@ -16,7 +16,7 @@ export default function Acara() {
           <span className="block font-bold">{t2}</span>
           <span className="block font-roboto text-xs">{t3}</span>
         </div>
-        <div className="w-20 h-20 rounded-full bg-white shadow-lg font-bold flex items-center justify-center border-4 border-yellow-500 text-2xl">
+        <div className="w-20 h-20 rounded-full bg-white shadow-lg font-bold flex items-center justify-center border-4 border-yellow-500 text-4xl">
           {t1}
         </div>
         <div className="text-left absolute -right-full top-1/2 transform -translate-y-1/2 w-full pl-3">
@@ -44,7 +44,7 @@ export default function Acara() {
       <ContainerTemplate>
         <motion.h1
           variants={fadeIn}
-          className="text-center font-salsa text-2xl"
+          className="text-center font-salsa text-3xl"
         >
           Rangkaian Acara
         </motion.h1>

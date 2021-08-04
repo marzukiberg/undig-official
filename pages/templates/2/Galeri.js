@@ -12,24 +12,24 @@ export default function Galeri() {
 
   const images = [
     {
-      original: '/template_one/galeri/1.png',
-      thumbnail: '/template_one/galeri/1.png',
+      original: '/templates/2/galeri/1.png',
+      thumbnail: '/templates/2/galeri/1.png',
     },
     {
-      original: '/template_one/galeri/2.png',
-      thumbnail: '/template_one/galeri/2.png',
+      original: '/templates/2/galeri/2.png',
+      thumbnail: '/templates/2/galeri/2.png',
     },
     {
-      original: '/template_one/galeri/3.png',
-      thumbnail: '/template_one/galeri/3.png',
+      original: '/templates/2/galeri/3.png',
+      thumbnail: '/templates/2/galeri/3.png',
     },
     {
-      original: '/template_one/galeri/4.png',
-      thumbnail: '/template_one/galeri/4.png',
+      original: '/templates/2/galeri/4.png',
+      thumbnail: '/templates/2/galeri/4.png',
     },
     {
-      original: '/template_one/galeri/5.png',
-      thumbnail: '/template_one/galeri/5.png',
+      original: '/templates/2/galeri/5.png',
+      thumbnail: '/templates/2/galeri/5.png',
     },
   ];
 
@@ -52,13 +52,13 @@ export default function Galeri() {
         id="galeri"
         className="galeri relative"
       >
-        <BackgroundImage noOverlay src="/templates/1/background/5.png" />
+        <BackgroundImage src="/templates/2/background/5.jpeg" />
 
         <ContainerTemplate>
           <div className="header text-center font-quicksand space-y-3">
             <motion.h1
               variants={fadeInUp}
-              className="text-center font-segoe text-2xl text-white"
+              className="text-center font-segoe text-3xl"
             >
               You & Me
             </motion.h1>

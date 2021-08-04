@@ -11,7 +11,7 @@ const CountdownTimer = ({ date }) => (
       <motion.div className="space-y-6 text-center" variants={fadeIn}>
         <span className="block font-salsa">
           Hitung Mundur Acara{' '}
-          <span className="text-yellow-500">Resepsi Pernikahan</span>
+          <span className="text-green700">Resepsi Pernikahan</span>
         </span>
         <div className="flex gap-x-3 items-center justify-center">
           <motion.div

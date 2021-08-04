@@ -1,0 +1,3 @@
+.card__paket:focus > .card__list, .card__paket:active > .card__list  {
+    transform: scale(1);
+}
