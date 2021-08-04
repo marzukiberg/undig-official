@@ -23,7 +23,7 @@ const CardMempelai = ({
           <div className="card-body pt-0 d-flex flex-column justify-content-center">
             <span className="mempelai_name salsa">{name}</span>
             <img
-              src="/template_one/underline-nama-mempelai.png"
+              src="/templates/1/underline-nama-mempelai.png"
               alt="Underline Nama Mempelai"
               className="img-fluid mempelai_underline"
             />

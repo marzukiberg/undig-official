@@ -1,8 +1,8 @@
 import { motion, MotionConfig } from 'framer-motion';
 import React from 'react';
-import BackgroundImage from '../components/BackgroundImage';
-import ContainerTemplate from '../components/ContainerTemplate';
-import { fadeIn } from '../utils/Constants';
+import BackgroundImage from '../../components/BackgroundImage';
+import ContainerTemplate from '../../components/ContainerTemplate';
+import { fadeIn } from '../../utils/Constants';
 
 export default function Pembuka({ setpageindex, toggleAudio }) {
   const bukaUndangan = () => {
@@ -20,7 +20,7 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
         animate="show"
       >
         <BackgroundImage
-          src="/template_one/background/1.png"
+          src="/templates/1/background/1.png"
           className="object-right"
           noOverlay
         />
@@ -38,7 +38,7 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
             variants={fadeIn}
           >
             <img
-              src="/template_one/embel/frame-nama.png"
+              src="/templates/1/embel/frame-nama.png"
               alt="Frame Nama"
               className="content__names-background h-full block mx-auto object-contain"
             />
@@ -60,7 +60,7 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
             </div>
             <motion.img
               variants={fadeIn}
-              src="/template_one/embel/underline-nama.png"
+              src="/templates/1/embel/underline-nama.png"
               alt="Underline"
               className="w-1/2 object-contain block mx-auto mb-6"
             />

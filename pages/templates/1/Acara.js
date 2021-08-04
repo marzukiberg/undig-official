@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import BackgroundImage from '../components/BackgroundImage';
-import ContainerTemplate from '../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../utils/Constants';
+import BackgroundImage from '../../components/BackgroundImage';
+import ContainerTemplate from '../../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../../utils/Constants';
 import CountdownTimer from './components/CountdownTimer';
 
 export default function Acara() {
@@ -39,7 +39,7 @@ export default function Acara() {
       id="acara"
       className="acara relative"
     >
-      <BackgroundImage src="/template_one/background/3.png" />
+      <BackgroundImage src="/templates/1/background/3.png" />
 
       <ContainerTemplate>
         <motion.h1
@@ -52,7 +52,7 @@ export default function Acara() {
         <motion.div className="content space-y-3">
           <motion.img
             variants={fadeIn}
-            src="/template_one/embel/akad.png"
+            src="/templates/1/embel/akad.png"
             alt="Akad Nikah"
             className="w-full"
           />
@@ -67,7 +67,7 @@ export default function Acara() {
           />
           <motion.img
             variants={fadeIn}
-            src="/template_one/embel/resepsi.png"
+            src="/templates/1/embel/resepsi.png"
             alt="Resepsi Pernikahan Underline"
             className="w-full"
           />

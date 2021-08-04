@@ -1,4 +1,8 @@
-const Container = ({ children, className }) => {
+import PropTypes from 'prop-types'
+
+const Container = (props) => {
+  const { children, className } = props;
+  
   return (
     <div
       className={
@@ -9,4 +13,8 @@ const Container = ({ children, className }) => {
     </div>
   );
 };
+Container.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+}
 export default Container;

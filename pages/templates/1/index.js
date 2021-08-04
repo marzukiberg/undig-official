@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import Scrollbar from 'react-scrollbars-custom';
-import Header from '../components/Header';
+import Header from '../../components/Header';
 import Acara from './Acara';
 import Footer from './Footer';
 import Galeri from './Galeri';

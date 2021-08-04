@@ -7,8 +7,8 @@ const Hero = () => {
         className="absolute left-0 top-0 w-full h-full object-cover -z-1"
       />
       <div className="container mx-auto min-h-screen table">
-        <div className="text-center space-y-6 wow fadeIn table-cell align-middle">
-          <h1 className="text-4xl font-greatvb lg:text-6xl">Undig.id</h1>
+        <div className="text-center space-y-6 table-cell align-middle">
+          <h1 className="text-4xl font-greatvb md:text-6xl lg:text-8xl">Undig.id</h1>
           <p className="font-roboto max-w-lg mx-auto leading-6 lg:text-lg">
             Buat undangan pernikahanmu spesial menggunakan layanan online kami,
             cukup dengan satu link, undang semua kerabat dan teman dekatmu

@@ -55,7 +55,7 @@ const Navbar = () => {
 
         <div>
           <a
-            href="javascript:;"
+            href="#"
             onClick={toggleSidebar}
             className="inline-flex w-11 h-11 rounded items-center justify-center lg:hidden"
           >
@@ -92,7 +92,7 @@ const Navbar = () => {
               ))}
               <a
                 onClick={toggleSidebar}
-                href={`javascript:;`}
+                href={`#`}
                 className="block p-3 text-center text-gray-700 bg-gray-100 duration-300 lg:hidden"
               >
                 Tutup

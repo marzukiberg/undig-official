@@ -1,4 +1,7 @@
-const Card = ({ children, className }) => {
+import PropTypes from 'prop-types'
+
+const Card = (props) => {
+  const { children, className } = props
   return (
     <div
       className={
@@ -11,4 +14,8 @@ const Card = ({ children, className }) => {
     </div>
   );
 };
+Card.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+}
 export default Card;

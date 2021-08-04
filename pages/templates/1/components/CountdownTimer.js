@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import Countdown from 'react-countdown';
-import { fadeIn, fadeInUp } from '../../utils/Constants';
+import { fadeIn, fadeInUp } from '../../../utils/Constants';
 
 const CountdownTimer = ({ date }) => (
   <Countdown

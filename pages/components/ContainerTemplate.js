@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const ContainerTemplate = ({ children, className, noFrame = false }) => {
   return (
     <>
@@ -10,7 +12,7 @@ const ContainerTemplate = ({ children, className, noFrame = false }) => {
         {!noFrame && (
           <div className="absolute top-0 left-0 w-full h-full -z-1">
             <img
-              src="/template_one/embel/frame.png"
+              src="/templates/1/embel/frame.png"
               alt="Frame"
               className="absolute"
             />
@@ -28,5 +30,14 @@ const ContainerTemplate = ({ children, className, noFrame = false }) => {
     </>
   );
 };
+
+ContainerTemplate.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  noFrame: PropTypes.bool,
+}
+ContainerTemplate.defaultProps = {
+  noFrame: false
+}
 
 export default ContainerTemplate;

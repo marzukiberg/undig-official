@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const H1 = ({ children, className }) => {
   return (
     <h1
@@ -9,4 +11,10 @@ const H1 = ({ children, className }) => {
     </h1>
   );
 };
+
+H1.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+}
+
 export default H1;

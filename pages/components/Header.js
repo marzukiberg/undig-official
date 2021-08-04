@@ -1,7 +1,14 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types'
 
 export default function Header({ title }) {
+  useEffect(() => {
+    if(window !== undefined){
+      new Animations().load()
+      new WOW().init()
+    }
+  }, [])
   return (
     <Head>
       <title>{title}</title>
@@ -16,13 +23,23 @@ export default function Header({ title }) {
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js"></script>
 
       {/* Leaflet */}
       <link rel="stylesheet" href="/vendor/css/leaflet.css" />
       <script src="/vendor/js/leaflet.js"></script>
+
+      {/* wow js and animate */}
+      <link rel="stylesheet" href="/vendor/css/animate.compat.min.css" />
+      <script src="/vendor/js/wow.min.js"></script>
+
+      {/* Main */}
       <script src="/main.js"></script>
       {/* <script src="/anti-inspect-element.js"></script> */}
     </Head>
   );
+}
+
+
+Header.propTypes = {
+  title: PropTypes.string,
 }

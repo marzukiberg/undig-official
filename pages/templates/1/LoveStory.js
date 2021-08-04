@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import BackgroundImage from '../components/BackgroundImage';
-import ContainerTemplate from '../components/ContainerTemplate';
-import { fadeIn, slideLeft, slideRight } from '../utils/Constants';
+import BackgroundImage from '../../components/BackgroundImage';
+import ContainerTemplate from '../../components/ContainerTemplate';
+import { fadeIn, slideLeft, slideRight } from '../../utils/Constants';
 
 export default function LoveStory() {
   return (
@@ -13,7 +13,7 @@ export default function LoveStory() {
       id="love_story"
       className="love_story relative"
     >
-      <BackgroundImage src="/template_one/background/4.png" />
+      <BackgroundImage src="/templates/1/background/4.png" />
 
       <ContainerTemplate>
         <div className="header text-center font-roboto space-y-3 text-sm">
@@ -25,7 +25,7 @@ export default function LoveStory() {
           </motion.h1>
           <motion.img
             variants={fadeIn}
-            src="/template_one/embel/underline-3.png"
+            src="/templates/1/embel/underline-3.png"
             alt="Underline 3"
             className="w-1/2 block mx-auto"
           />

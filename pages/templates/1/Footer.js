@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/Constants';
+import { fadeIn } from '../../utils/Constants';
 
 const BottomLink = ({
   href = '#',
@@ -15,7 +15,7 @@ const BottomLink = ({
       onClick={onClick}
       className={`flex-grow h-12 flex items-center justify-center duration-300 hover:bg-blue-500 hover:bg-opacity-50 ${className}`}
     >
-      <img src={`/template_one/${img}`} alt="Footer Icon" />
+      <img src={`/templates/1/${img}`} alt="Footer Icon" />
     </motion.a>
   );
 };

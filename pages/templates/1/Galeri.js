@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import Modal from 'react-modal';
-import BackgroundImage from '../components/BackgroundImage';
-import ContainerTemplate from '../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../utils/Constants';
+import BackgroundImage from '../../components/BackgroundImage';
+import ContainerTemplate from '../../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../../utils/Constants';
 
 export default function Galeri() {
   const [modalGallery, showModalGallery] = useState(false);
@@ -52,7 +52,7 @@ export default function Galeri() {
         id="galeri"
         className="galeri relative"
       >
-        <BackgroundImage noOverlay src="/template_one/background/5.png" />
+        <BackgroundImage noOverlay src="/templates/1/background/5.png" />
 
         <ContainerTemplate>
           <div className="header text-center font-quicksand space-y-3">

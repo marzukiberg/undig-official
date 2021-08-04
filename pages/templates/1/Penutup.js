@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { Image } from 'react-bootstrap';
-import BackgroundImage from '../components/BackgroundImage';
-import ContainerTemplate from '../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../utils/Constants';
+import BackgroundImage from '../../components/BackgroundImage';
+import ContainerTemplate from '../../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../../utils/Constants';
 
 export default function Penutup() {
   const [show, setShow] = useState(false);
@@ -20,7 +20,7 @@ export default function Penutup() {
       id="penutup"
       className="penutup relative"
     >
-      <BackgroundImage src="/template_one/background/7.png" />
+      <BackgroundImage src="/templates/1/background/7.png" />
 
       <ContainerTemplate>
         <motion.div
@@ -71,7 +71,7 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="/template_one/whatsapp.svg" alt="Whatsapp" />
+                <Image src="/templates/1/whatsapp.svg" alt="Whatsapp" />
                 <span className="d-block">082286062083</span>
               </a>
 
@@ -80,7 +80,7 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="/template_one/instagram.svg" alt="Instagram" />
+                <Image src="/templates/1/instagram.svg" alt="Instagram" />
                 <span className="d-block">undig_official</span>
               </a>
             </div>

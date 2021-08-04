@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
-import BackgroundImage from '../components/BackgroundImage';
-import ContainerTemplate from '../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../utils/Constants';
+import BackgroundImage from '../../components/BackgroundImage';
+import ContainerTemplate from '../../components/ContainerTemplate';
+import { fadeIn, fadeInUp } from '../../utils/Constants';
 
 export default function Peta() {
   const mapRef = useRef();
@@ -48,7 +48,7 @@ export default function Peta() {
       id="peta"
       className="peta relative"
     >
-      <BackgroundImage noOverlay src="/template_one/background/6.png" />
+      <BackgroundImage noOverlay src="/templates/1/background/6.png" />
 
       <ContainerTemplate>
         <motion.div
@@ -56,12 +56,12 @@ export default function Peta() {
           className="header text-center font-quicksand space-y-3"
         >
           <img
-            src="/template_one/embel/title-section-6.png"
+            src="/templates/1/embel/title-section-6.png"
             alt="Title"
             className="w-1/2 block mx-auto"
           />
           <img
-            src="/template_one/embel/underline-3.png"
+            src="/templates/1/embel/underline-3.png"
             alt="Underline Lokasi"
             className="w-1/2 block mx-auto"
           />

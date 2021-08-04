@@ -11,14 +11,14 @@ const Template = () => {
       smallImg: 'template_one-small.png',
       title: 'Template Satu',
       desc: 'Template dengan nuansa penuh cinta berwarna pink.',
-      link: 'template_one',
+      link: '1',
     },
     {
       img: 'template_two.png',
       smallImg: 'template_two-small.png',
       title: 'Template Dua',
       desc: 'Template dengan nuansa kehijauan siap memanjakan tamu undangan Anda dengan tampilan yang enak dipandang.',
-      link: 'template_two',
+      link: '2',
     },
   ];
 
@@ -39,13 +39,13 @@ const Template = () => {
             <Card className="shadow p-0 space-y-3 text-center" key={index}>
               <div className="relative">
                 <img
-                  src={'images/' + item.img}
+                  src={'/images/' + item.img}
                   alt="Template"
                   className="w-full max-h-80 object-contain"
                   onClick={() => openImage(item.img)}
                 />
                 <img
-                  src={'images/' + item.img}
+                  src={'/images/' + item.img}
                   alt="Template"
                   className="w-full h-full object-cover absolute left-0 top-0 -z-1 filter blur-sm"
                   onClick={() => openImage(item.img)}
@@ -57,7 +57,7 @@ const Template = () => {
                 </h4>
                 <p className="font-roboto leading-8">{item.desc}</p>
 
-                <Link href={`/${item.link}`}>
+                <Link href={`templates/${item.link}`}>
                   <button className="bg-pink-500 py-2 px-6 rounded text-white font-poppins">
                     Buka Template
                   </button>

@@ -1,4 +1,7 @@
-const BackgroundImage = ({ src, className, noOverlay = false }) => {
+import PropTypes from 'prop-types';
+
+const BackgroundImage = (props) => {
+  const {src, className, noOverlay} = props;
   return (
     <div>
       <img
@@ -14,6 +17,15 @@ const BackgroundImage = ({ src, className, noOverlay = false }) => {
       )}
     </div>
   );
+};
+
+BackgroundImage.propTypes = {
+  src: PropTypes.string,
+  className: PropTypes.string,
+  noOverlay: PropTypes.bool,
+};
+BackgroundImage.defaultProps = {
+  noOverlay: false,
 };
 
 export default BackgroundImage;
