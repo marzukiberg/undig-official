@@ -1,8 +1,6 @@
 import { useRef } from "react";
-import { useState } from "react";
-import Container from "../components/Container";
-import H1 from "../components/H1";
-
+import { H1Landing } from "../../components/atoms";
+import { Container } from "../../components/organisms";
 const Contact = () => {
   const nama = useRef();
   const pesan = useRef();
@@ -22,7 +20,7 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <Container className="space-y-6">
-        <H1>Kontak</H1>
+        <H1Landing>Kontak</H1Landing>
         <form
           onSubmit={send}
           className="space-y-3 font-poppins max-w-lg mx-auto"

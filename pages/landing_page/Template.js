@@ -56,7 +56,7 @@ const Template = () => {
   const openImage = (img) => {
     window.open(img, "_blank");
   };
-  s;
+
   return (
     <section className="template relative" id="template">
       <Image

@@ -1,6 +1,6 @@
-import Card from '../components/Card';
-import Container from '../components/Container';
-import H1 from '../components/H1';
+import { H1Landing } from "../../components/atoms";
+import { CardLanding } from "../../components/molecules";
+import { Container } from "../../components/organisms";
 
 const Alur = () => {
   return (
@@ -10,12 +10,12 @@ const Alur = () => {
         alt="Flower"
         className="absolute left-0 top-0 transform w-full h-full object-contain -z-1 lg:object-cover"
       />
-      <Container>
+      <Container noFrame>
         <div className="space-y-12">
-          <H1>Alur Pemesanan</H1>
+          <H1Landing>Alur Pemesanan</H1Landing>
 
           <div className="grid gap-3 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="text-center relative">
+            <CardLanding className="text-center relative">
               <div className="text-2xl absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-11 h-11 inline-flex items-center justify-center text-white font-poppins rounded-full bg-pink-500">
                 1
               </div>
@@ -32,8 +32,8 @@ const Alur = () => {
               >
                 Lihat Template
               </a>
-            </Card>
-            <Card className="text-center relative">
+            </CardLanding>
+            <CardLanding className="text-center relative">
               <div className="text-2xl absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-11 h-11 inline-flex items-center justify-center text-white font-poppins rounded-full bg-pink-500">
                 2
               </div>
@@ -45,8 +45,8 @@ const Alur = () => {
                 dipilih, atau lihat template terlebih dahulu dengan mengklik '
                 <b>Preview</b>'.
               </p>
-            </Card>
-            <Card className="text-center relative">
+            </CardLanding>
+            <CardLanding className="text-center relative">
               <div className="text-2xl absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-11 h-11 inline-flex items-center justify-center text-white font-poppins rounded-full bg-pink-500">
                 3
               </div>
@@ -57,8 +57,8 @@ const Alur = () => {
                 Kirimkan data-data pernikahan Anda seperti galeri foto, nama
                 mempelai, cerita cinta, dan lain-lain.
               </p>
-            </Card>
-            <Card className="text-center relative">
+            </CardLanding>
+            <CardLanding className="text-center relative">
               <div className="text-2xl absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-11 h-11 inline-flex items-center justify-center text-white font-poppins rounded-full bg-pink-500">
                 4
               </div>
@@ -70,7 +70,7 @@ const Alur = () => {
                 dikerjakan, kami akan mengirimkan undangan Anda dalam bentuk
                 tautan.
               </p>
-            </Card>
+            </CardLanding>
           </div>
         </div>
       </Container>
