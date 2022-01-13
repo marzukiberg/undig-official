@@ -1,3 +1,4 @@
+import Button from '../../components/atoms/Button';
 const Hero = () => {
   return (
     <section className="hero bg-white bg-opacity-75">
@@ -8,17 +9,17 @@ const Hero = () => {
       />
       <div className="container mx-auto min-h-screen table">
         <div className="text-center space-y-6 table-cell align-middle">
-          <h1 className="text-4xl font-greatvb md:text-6xl lg:text-8xl">Undig.id</h1>
-          <p className="font-roboto max-w-lg mx-auto leading-6 lg:text-lg">
+          <h1 className="text-6xl font-greatvb lg:text-8xl">Undig.id</h1>
+          <p className="font-roboto max-w-lg mx-auto leading-9 text-lg">
             Buat undangan pernikahanmu spesial menggunakan layanan online kami,
             cukup dengan satu link, undang semua kerabat dan teman dekatmu
             dengan mudah.
           </p>
-          <a
-            href="#mengapa_kami"
-            className="font-poppins inline-block px-12 py-2 rounded-full bg-white  border border-pink-500 shadow-lg text-pink-500 hover:bg-pink-500 focus:bg-pink-500  transform hover:scale-105 focus:scale-105 duration-300 hover:text-white focus-within:text-white"
-          >
-            MULAI
+
+          <a href="#mengapa_kami" className="inline-block">
+            <Button classes="bg-pink-500 rounded-full text-white w-40 hover:bg-pink-700 focus:ring duration-300">
+              MULAI
+            </Button>
           </a>
         </div>
       </div>

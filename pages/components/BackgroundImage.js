@@ -1,14 +1,16 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import Image from "next/image";
 
 const BackgroundImage = (props) => {
-  const {src, className, noOverlay} = props;
+  const { src, className, noOverlay } = props;
   return (
     <div>
-      <img
+      <Image
         src={src}
+        layout="fill"
         alt="background"
         className={
-          'background absolute left-0 top-0 w-full h-full object-cover -z-1 ' +
+          "background absolute left-0 top-0 w-full h-full object-cover -z-1 " +
           className
         }
       />
