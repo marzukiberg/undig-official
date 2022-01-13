@@ -9,6 +9,7 @@ const BackgroundImage = (props) => {
         src={src}
         layout="fill"
         alt="background"
+        quality={100}
         className={
           "background absolute left-0 top-0 w-full h-full object-cover -z-1 " +
           className

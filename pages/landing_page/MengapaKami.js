@@ -1,19 +1,23 @@
-import Card from '../components/Card';
-import Container from '../components/Container';
-import H1 from '../components/H1';
+import { H1Landing } from "../../components/atoms/H1";
+import Card from "../components/Card";
+import Image from "next/image";
+import Container from "../components/Container";
 
 const MengapaKami = () => {
   return (
     <section className="mengapa_kami" id="mengapa_kami">
       <Container>
         <div className="space-y-6">
-          <H1>Kenapa harus Undig?</H1>
+          <H1Landing>Kenapa harus Undig?</H1Landing>
 
-          <img
-            src="images/whyus.png"
-            alt="Mengapa Kami"
-            className="block mx-auto md:w-1/2 lg:w-96 lg:float-left lg:mr-3"
-          />
+          <div className="block mx-auto h-64 md:w-1/2 lg:w-96 lg:float-left lg:mr-3 relative">
+            <Image
+              layout="fill"
+              src="/images/whyus.png"
+              alt="Mengapa Kami"
+              objectFit="contain"
+            />
+          </div>
 
           <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-3">
             <Card className="text-center">

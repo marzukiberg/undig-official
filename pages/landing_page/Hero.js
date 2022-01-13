@@ -1,12 +1,12 @@
-import Button from '../../components/atoms/Button';
+import Button from "../../components/atoms/Button";
+import Image from "next/image";
+
 const Hero = () => {
   return (
     <section className="hero bg-white bg-opacity-75">
-      <img
-        src="images/wedding-table.jpg"
-        alt="Hero"
-        className="absolute left-0 top-0 w-full h-full object-cover -z-1"
-      />
+      <div className="absolute left-0 top-0 w-full h-full object-cover -z-1">
+        <Image layout="fill" src="/images/wedding-table.jpg" alt="Hero" />
+      </div>
       <div className="container mx-auto min-h-screen table">
         <div className="text-center space-y-6 table-cell align-middle">
           <h1 className="text-6xl font-greatvb lg:text-8xl">Undig.id</h1>

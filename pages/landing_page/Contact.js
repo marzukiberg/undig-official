@@ -1,22 +1,22 @@
-import { useRef } from 'react';
-import { useState } from 'react';
-import Container from '../components/Container';
-import H1 from '../components/H1';
+import { useRef } from "react";
+import { useState } from "react";
+import Container from "../components/Container";
+import H1 from "../components/H1";
 
 const Contact = () => {
   const nama = useRef();
   const pesan = useRef();
-  const hp = '6282377364295';
+  const hp = "6282377364295";
   const send = () => {
     const namaValue = nama.current.value;
     const pesanValue = pesan.current.value;
-    if (namaValue.trim() === '' || pesanValue.trim() === '') {
-      alert('harap masukkan nama dan pesan');
+    if (namaValue.trim() === "" || pesanValue.trim() === "") {
+      alert("harap masukkan nama dan pesan");
       return;
     }
     window.open(
       `https://wa.me/${hp}?text=Pengirim+%3A+${namaValue}%0D%0APesan+%3A+${pesanValue}`,
-      '_blank'
+      "_blank"
     );
   };
   return (

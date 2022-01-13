@@ -1,52 +1,52 @@
-import Link from 'next/link';
-import Card from '../components/Card';
-import Container from '../components/Container';
-import H1 from '../components/H1';
+import Image from "next/image";
+import Link from "next/link";
+import { H1Landing } from "../../components/atoms/H1";
+import { CardLanding } from "../../components/molecules/Card";
+import Container from "../components/Container";
 
 const Template = () => {
-  const noHp = '6282286062083';
   const templates = [
     {
-      img: '/images/templates/1.png',
-      smallImg: '/images/templates/mini/1.png',
-      title: 'Rose',
-      desc: 'Template dengan nuansa penuh cinta berwarna pink.',
-      btnColor: 'bg-pink-500',
+      img: "/images/templates/1.png",
+      smallImg: "/images/templates/mini/1.png",
+      title: "Rose",
+      desc: "Template dengan nuansa penuh cinta berwarna pink.",
+      btnColor: "bg-pink-500",
       links: [
         {
-          text: 'Buka Template',
-          link: '/templates/1',
+          text: "Buka Template",
+          link: "/templates/1",
         },
       ],
     },
     {
-      img: '/images/templates/2.png',
-      smallImg: '/images/templates/mini/2.png',
-      title: 'Green',
-      desc: 'Template dengan nuansa kehijauan siap memanjakan tamu undangan Anda dengan tampilan yang enak dipandang.',
-      btnColor: 'bg-green300',
+      img: "/images/templates/2.png",
+      smallImg: "/images/templates/mini/2.png",
+      title: "Green",
+      desc: "Template dengan nuansa kehijauan siap memanjakan tamu undangan Anda dengan tampilan yang enak dipandang.",
+      btnColor: "bg-green300",
       links: [
         {
-          text: 'Biasa',
-          link: '/templates/2',
+          text: "Biasa",
+          link: "/templates/2",
         },
         {
-          text: 'Scroll Kesamping',
-          link: '/templates/4',
+          text: "Scroll Kesamping",
+          link: "/templates/4",
           new: true,
         },
       ],
     },
     {
-      img: '/images/templates/3.png',
-      smallImg: '/images/templates/mini/3.png',
-      title: 'Purple',
-      desc: 'Template dengan nuansa kehijauan siap memanjakan tamu undangan Anda dengan tampilan yang enak dipandang.',
-      btnColor: 'bg-indigo500',
+      img: "/images/templates/3.png",
+      smallImg: "/images/templates/mini/3.png",
+      title: "Purple",
+      desc: "Template dengan nuansa kehijauan siap memanjakan tamu undangan Anda dengan tampilan yang enak dipandang.",
+      btnColor: "bg-indigo500",
       links: [
         {
-          text: 'Buka Template',
-          link: '/templates/2',
+          text: "Buka Template",
+          link: "/templates/2",
         },
       ],
       new: true,
@@ -54,27 +54,36 @@ const Template = () => {
   ];
 
   const openImage = (img) => {
-    window.open(img, '_blank');
+    window.open(img, "_blank");
   };
+  s;
   return (
     <section className="template relative" id="template">
-      <img
+      <Image
+        layout="fill"
         src="/images/flower.png"
         alt="Flower"
         className="background absolute left-0 top-0 w-full h-full object-contain -z-1 lg:object-cover"
       />
       <Container className="space-y-12">
-        <H1>Template</H1>
+        <H1Landing>Template</H1Landing>
+        <br />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {templates.map((item, index) => (
-            <Card className="shadow p-0 space-y-3 text-center" key={index}>
+            <CardLanding
+              className="shadow p-0 space-y-3 text-center"
+              key={index}
+            >
               <div className="relative">
-                <img
-                  src={item.img}
-                  alt="Template"
-                  className="w-full max-h-80 object-contain"
-                  onClick={() => openImage(item.img)}
-                />
+                <div className="relative w-full h-80">
+                  <Image
+                    layout="fill"
+                    src={item.img}
+                    alt="Template"
+                    objectFit="contain"
+                    onClick={() => openImage(item.img)}
+                  />
+                </div>
                 <img
                   src={item.img}
                   alt="Template"
@@ -110,7 +119,7 @@ const Template = () => {
                   ))}
                 </div>
               </div>
-            </Card>
+            </CardLanding>
           ))}
         </div>
       </Container>

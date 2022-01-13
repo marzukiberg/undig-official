@@ -1,14 +1,12 @@
-import { motion } from 'framer-motion';
-import React, { useEffect, useRef } from 'react';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../../utils/Constants';
+import React, { useEffect, useRef } from "react";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
 
 export default function Peta() {
   const mapRef = useRef();
   const mapLinkRef = useRef();
   useEffect(async () => {
-    if (window !== undefined) {
+    if (window) {
       initMap();
     }
   }, []);
@@ -18,19 +16,19 @@ export default function Peta() {
       long = 101.38293,
       mymap = await L.map(mapRef.current).setView([lat, long], 14),
       accessToken =
-        'pk.eyJ1IjoibWFyenVraWJlcmciLCJhIjoiY2tmcm4xbnlpMGV0cDJwbnBkbXN0ZGZtOSJ9.t_s6XqB0K2keyQMx349FPA';
+        "pk.eyJ1IjoibWFyenVraWJlcmciLCJhIjoiY2tmcm4xbnlpMGV0cDJwbnBkbXN0ZGZtOSJ9.t_s6XqB0K2keyQMx349FPA";
 
     await mapLinkRef.current.setAttribute(
-      'href',
+      "href",
       `https://www.google.com/maps/@${lat},${long},15z`
     );
     await L.tileLayer(
-      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
       {
         attribution:
           'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
-        id: 'mapbox/streets-v11',
+        id: "mapbox/streets-v11",
         tileSize: 512,
         zoomOffset: -1,
         accessToken: accessToken,
@@ -41,20 +39,11 @@ export default function Peta() {
   };
 
   return (
-    <motion.section
-      variants={fadeIn}
-      initial="hide"
-      animate="show"
-      id="peta"
-      className="peta relative"
-    >
-      <BackgroundImage noOverlay src="/templates/1/background/6.png" />
+    <section initial="hide" animate="show" id="peta" className="peta relative">
+      <BackgroundImageTemplate noOverlay src="/templates/1/background/6.png" />
 
       <ContainerTemplate>
-        <motion.div
-          variants={fadeInUp}
-          className="header text-center font-quicksand space-y-3"
-        >
+        <div className="header text-center font-quicksand space-y-3">
           <img
             src="/templates/1/embel/title-section-6.png"
             alt="Title"
@@ -69,16 +58,16 @@ export default function Peta() {
             <span className="font-bold block">Kediaman Mempelai Wanita</span>
             <span>Jalan Bina Keluarga</span>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div variants={fadeInUp} className="content space-y-3">
+        <div className="content space-y-3">
           <div
             id="map"
             ref={mapRef}
             className="map w-full h-80 rounded-xl shadow-lg"
           />
           <div className="text-center font-roboto">
-            Lihat di{' '}
+            Lihat di{" "}
             <a
               href="#"
               ref={mapLinkRef}
@@ -88,8 +77,8 @@ export default function Peta() {
               Google Maps
             </a>
           </div>
-        </motion.div>
+        </div>
       </ContainerTemplate>
-    </motion.section>
+    </section>
   );
 }

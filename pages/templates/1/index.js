@@ -1,14 +1,14 @@
-import { useRef, useState } from 'react';
-import Scrollbar from 'react-scrollbars-custom';
-import Header from '../../components/Header';
-import Acara from './Acara';
-import Footer from './Footer';
-import Galeri from './Galeri';
-import LoveStory from './LoveStory';
-import Mempelai from './Mempelai';
-import Pembuka from './Pembuka';
-import Penutup from './Penutup';
-import Peta from './Peta';
+import { useRef, useState } from "react";
+import Scrollbar from "react-scrollbars-custom";
+import Header from "../../components/Header";
+import Acara from "./Acara";
+import Footer from "./Footer";
+import Galeri from "./Galeri";
+import LoveStory from "./LoveStory";
+import Mempelai from "./Mempelai";
+import Pembuka from "./Pembuka";
+import Penutup from "./Penutup";
+import Peta from "./Peta";
 
 export default function index() {
   const audioRef = useRef();
@@ -40,7 +40,7 @@ export default function index() {
       <Header title="Raihan dan Rahma" />
 
       <Scrollbar
-        className="max-w-sm mx-auto min-h-screen overflow-x-hidden shadow-xl"
+        className="max-w-md mx-auto min-h-screen overflow-x-hidden shadow-xl"
         trackYProps={{
           renderer: (props) => {
             const { elementRef, ...restProps } = props;
