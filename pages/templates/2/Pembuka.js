@@ -1,9 +1,7 @@
-import { motion, MotionConfig } from 'framer-motion';
-import React from 'react';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn } from '../../utils/Constants';
-import classess from './Pembuka.module.css'
+import Image from "next/image";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
+import styles from "./Pembuka.module.css";
 
 export default function Pembuka({ setpageindex, toggleAudio }) {
   const bukaUndangan = () => {
@@ -12,69 +10,55 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
   };
 
   return (
-    <MotionConfig>
-      <motion.section
-        id="pembuka"
-        className="relative"
-        variants={fadeIn}
-        initial="hide"
-        animate="show"
-      >
-        <BackgroundImage
-          src="/templates/2/background/1.png"
-          className="object-right"
-          noOverlay
-        />
+    <section id="pembuka" className="relative">
+      <BackgroundImageTemplate
+        src="/templates/2/background/1.png"
+        className="object-right"
+        noOverlay
+      />
 
-        <ContainerTemplate noFrame>
-          <motion.h1
-            className="text-center font-salsa text-3xl text-green700"
-            variants={fadeIn}
-          >
-            The Wedding Of
-          </motion.h1>
+      <ContainerTemplate>
+        <h1 className="text-center font-salsa text-3xl text-green700">
+          The Wedding Of
+        </h1>
 
-          <motion.div
-            className="content__names-holder relative text-center"
-            variants={fadeIn}
-          >
-            <img
+        <div className="content__names-holder relative text-center">
+          <div className="content__names-background w-80 h-96 block mx-auto relative">
+            <Image
+              layout="fill"
+              objectFit="contain"
               src="/templates/2/embel/frame-nama.png"
               alt="Frame Nama"
-              className="content__names-background h-full block mx-auto object-contain"
             />
-            <div className="content__names text-center w-full text-5xl text-green300 absolute top-1/2 left-0 transform -translate-y-1/2 font-salsa font-bold">
-              <div className={classess.content__name}>Raihan</div>
-              <div className={classess.content__name}>&</div>
-              <div className={classess.content__name}>Rahma</div>
-            </div>
-          </motion.div>
+          </div>
+          <div className="content__names text-center w-full text-5xl text-green300 absolute top-1/2 left-0 transform -translate-y-1/2 font-salsa font-bold">
+            <div className={styles.content__name}>Raihan</div>
+            <div className={styles.content__name}>&</div>
+            <div className={styles.content__name}>Rahma</div>
+          </div>
+        </div>
 
-          <div className="content__belongs font-roboto space-y-3">
-            <div>
-              <motion.span variants={fadeIn} className="text-sm font-segoe">
-                Kepada Yth:
-              </motion.span>
-              <motion.span variants={fadeIn} className="block mb-3 font-bold">
-                Alumni SIF
-              </motion.span>
-            </div>
-            <motion.img
-              variants={fadeIn}
+        <div className="content__belongs font-roboto space-y-3">
+          <div>
+            <span className="text-sm font-segoe">Kepada Yth:</span>
+            <span className="block mb-3 font-bold">Alumni SIF</span>
+          </div>
+          <div className="w-64 h-4 object-contain block mx-auto mb-6 relative">
+            <Image
+              layout="fill"
+              objectFit="contain"
               src="/templates/2/embel/underline-nama.png"
               alt="Underline"
-              className="w-1/2 object-contain block mx-auto mb-6"
             />
-            <motion.button
-              variants={fadeIn}
-              className="rounded-full py-2 px-6 bg-green200 border-2 text-white border-green700 font-salsa shadow-xl duration-300  hover:bg-green700 hover:text-white"
-              onClick={bukaUndangan}
-            >
-              Buka Undangan
-            </motion.button>
           </div>
-        </ContainerTemplate>
-      </motion.section>
-    </MotionConfig>
+          <button
+            className="rounded-full py-2 px-6 bg-green200 border-2 text-white border-green700 font-salsa shadow-xl duration-300  hover:bg-green700 hover:text-white"
+            onClick={bukaUndangan}
+          >
+            Buka Undangan
+          </button>
+        </div>
+      </ContainerTemplate>
+    </section>
   );
 }

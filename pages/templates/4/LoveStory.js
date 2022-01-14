@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn, slideLeft, slideRight } from '../../utils/Constants';
+import { motion } from "framer-motion";
+import React from "react";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
+import { fadeIn, slideLeft, slideRight } from "../../utils/Constants";
 
 export default function LoveStory() {
   return (
@@ -46,7 +46,7 @@ export default function LoveStory() {
                 variants={slideRight}
                 className="col-span-1"
                 style={{
-                  paddingBottom: '100%',
+                  paddingBottom: "100%",
                 }}
               >
                 <div className="bg-white py-6 px-3 w-full shadow-lg space-y-1 font-roboto box-border">
@@ -67,7 +67,7 @@ export default function LoveStory() {
                 variants={slideLeft}
                 className="col-span-1"
                 style={{
-                  paddingTop: '100%',
+                  paddingTop: "100%",
                 }}
               >
                 <div className="bg-white py-6 px-3 w-full shadow-lg space-y-1 font-roboto box-border">
@@ -84,7 +84,7 @@ export default function LoveStory() {
               <motion.div
                 variants={slideRight}
                 style={{
-                  paddingBottom: '100%',
+                  paddingBottom: "100%",
                 }}
               >
                 <div className="bg-white py-6 px-3 w-full shadow-lg space-y-1 font-roboto box-border">
@@ -104,7 +104,7 @@ export default function LoveStory() {
               <motion.div
                 variants={slideLeft}
                 style={{
-                  paddingTop: '100%',
+                  paddingTop: "100%",
                 }}
               >
                 <div className="bg-white py-6 px-3 w-full shadow-lg space-y-1 font-roboto box-border">

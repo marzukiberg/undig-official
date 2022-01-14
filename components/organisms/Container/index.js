@@ -32,7 +32,11 @@ export const Container = ({ children, className, useFrame = false }) => {
   );
 };
 
-export const ContainerTemplate = ({ children, className, noFrame = false }) => {
+export const ContainerTemplate = ({
+  children,
+  className,
+  useFrame = false,
+}) => {
   return (
     <>
       <div className="container w-full table min-h-screen p-6 pt-16">
@@ -41,7 +45,7 @@ export const ContainerTemplate = ({ children, className, noFrame = false }) => {
         >
           {children}
         </div>
-        {!noFrame && (
+        {useFrame && (
           <div className="absolute top-0 left-0 w-full h-full -z-1">
             <img
               src="/templates/1/embel/frame.png"

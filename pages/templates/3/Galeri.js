@@ -1,35 +1,35 @@
-import { motion } from 'framer-motion';
-import React, { useState } from 'react';
-import ImageGallery from 'react-image-gallery';
-import 'react-image-gallery/styles/css/image-gallery.css';
-import Modal from 'react-modal';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../../utils/Constants';
+import { motion } from "framer-motion";
+import React, { useState } from "react";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+import Modal from "react-modal";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
+import { fadeIn, fadeInUp } from "../../utils/Constants";
 
 export default function Galeri() {
   const [modalGallery, showModalGallery] = useState(false);
 
   const images = [
     {
-      original: '/templates/3/galeri/1.png',
-      thumbnail: '/templates/3/galeri/1.png',
+      original: "/templates/3/galeri/1.png",
+      thumbnail: "/templates/3/galeri/1.png",
     },
     {
-      original: '/templates/3/galeri/2.png',
-      thumbnail: '/templates/3/galeri/2.png',
+      original: "/templates/3/galeri/2.png",
+      thumbnail: "/templates/3/galeri/2.png",
     },
     {
-      original: '/templates/3/galeri/3.png',
-      thumbnail: '/templates/3/galeri/3.png',
+      original: "/templates/3/galeri/3.png",
+      thumbnail: "/templates/3/galeri/3.png",
     },
     {
-      original: '/templates/3/galeri/4.png',
-      thumbnail: '/templates/3/galeri/4.png',
+      original: "/templates/3/galeri/4.png",
+      thumbnail: "/templates/3/galeri/4.png",
     },
     {
-      original: '/templates/3/galeri/5.png',
-      thumbnail: '/templates/3/galeri/5.png',
+      original: "/templates/3/galeri/5.png",
+      thumbnail: "/templates/3/galeri/5.png",
     },
   ];
 

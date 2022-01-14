@@ -26,10 +26,12 @@ export const LoveStoryBox = ({ left, right, year, children }) => {
   );
 };
 
-export const LoveStoryVLine = () => {
+export const LoveStoryVLine = ({ colorClass = "bg-pink-500" }) => {
   return (
     <div className="absolute h-full w-1 bg-gray-700 rounded-t-full left-1/2 transform -translate-x-1/2 z-10">
-      <div className="absolute w-4 h-12 rounded-full bg-pink-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+      <div
+        className={`absolute w-4 h-12 rounded-full ${colorClass} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+      ></div>
     </div>
   );
 };

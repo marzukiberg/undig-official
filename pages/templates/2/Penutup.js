@@ -1,9 +1,7 @@
-import { motion } from 'framer-motion';
-import React, { useState } from 'react';
-import { Image } from 'react-bootstrap';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../../utils/Constants';
+import React, { useState } from "react";
+import Image from "next/image";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
 
 export default function Penutup() {
   const [show, setShow] = useState(false);
@@ -13,20 +11,11 @@ export default function Penutup() {
   };
 
   return (
-    <motion.section
-      variants={fadeIn}
-      initial="hide"
-      animate="show"
-      id="penutup"
-      className="penutup relative"
-    >
-      <BackgroundImage src="/templates/2/background/7.png" />
+    <section id="penutup" className="penutup relative">
+      <BackgroundImageTemplate src="/templates/2/background/7.png" />
 
-      <ContainerTemplate>
-        <motion.div
-          variants={fadeInUp}
-          className="header text-center font-roboto space-y-3 text-sm"
-        >
+      <ContainerTemplate useFrame>
+        <div className="header text-center font-roboto space-y-3 text-sm">
           <p className="font-bold">
             Bagi para tamu undangan diharapkan mengikuti protokol pecegahan
             Covid-19. (Memakai masker dan menjaga jarak fisik)
@@ -39,8 +28,8 @@ export default function Penutup() {
             bagi kaum yang berpikir.” <br /> (Q.S. Ar-Rum : 21) <br />
             <strong>Wassalamu’alaikum Warahmatullahi Wabarakatuh</strong>
           </p>
-        </motion.div>
-        <motion.div variants={fadeInUp} className="content space-y-3">
+        </div>
+        <div className="content space-y-3">
           <div className="font-quicksand flex flex-col items-center text-sm">
             <span>Turut Berbahagia</span>
             <span>Segenap Keluarga Besar</span>
@@ -71,7 +60,13 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="/templates/2/whatsapp.svg" alt="Whatsapp" />
+                <Image
+                  width={36}
+                  height={36}
+                  objectFit="contain"
+                  src="/templates/2/whatsapp.svg"
+                  alt="Whatsapp"
+                />
                 <span className="d-block">082286062083</span>
               </a>
 
@@ -80,22 +75,28 @@ export default function Penutup() {
                 target="_blank"
                 className="p-3 flex flex-col items-center font-bold"
               >
-                <Image src="/templates/2/instagram.svg" alt="Instagram" />
+                <Image
+                  width={36}
+                  height={36}
+                  objectFit="contain"
+                  src="/templates/2/instagram.svg"
+                  alt="Instagram"
+                />
                 <span className="d-block">undig_official</span>
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </ContainerTemplate>
 
       <div
         className={`absolute left-0 top-0 bg-black bg-opacity-20 w-full h-full z-50 flex justify-center items-center transform ${
-          show ? 'scale-100' : 'scale-0'
+          show ? "scale-100" : "scale-0"
         }`}
       >
         <div
           className={`mx-auto bg-white p-6 space-y-6 rounded transform duration-300 ${
-            show ? 'scale-100' : 'scale-0'
+            show ? "scale-100" : "scale-0"
           }`}
         >
           <div className="space-y-2">
@@ -146,6 +147,6 @@ export default function Penutup() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

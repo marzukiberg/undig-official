@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../../utils/Constants';
-import CountdownTimer from './components/CountdownTimer';
+import { motion } from "framer-motion";
+import React from "react";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
+import { fadeIn, fadeInUp } from "../../utils/Constants";
+import CountdownTimer from "./components/CountdownTimer";
 
 export default function Acara() {
   const DateFrame = ({ t1, t2, t3, t4, t5, t6, t7 }) => (
@@ -80,7 +80,7 @@ export default function Acara() {
             t6="Kediaman Mempelai Wanita"
             t7="Jalan Bina Keluarga"
           />
-          <CountdownTimer date={'2021-10-24 10:00'} />
+          <CountdownTimer date={"2021-10-24 10:00"} />
         </motion.div>
       </ContainerTemplate>
     </motion.section>

@@ -1,9 +1,9 @@
-import { motion, MotionConfig } from 'framer-motion';
-import React from 'react';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn } from '../../utils/Constants';
-import classess from './Pembuka.module.css'
+import { motion, MotionConfig } from "framer-motion";
+import React from "react";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
+import { fadeIn } from "../../utils/Constants";
+import classess from "./Pembuka.module.css";
 
 export default function Pembuka({ setpageindex, toggleAudio }) {
   const bukaUndangan = () => {

@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import React, { useState } from 'react';
-import { Image } from 'react-bootstrap';
-import BackgroundImage from '../../components/BackgroundImage';
-import ContainerTemplate from '../../components/ContainerTemplate';
-import { fadeIn, fadeInUp } from '../../utils/Constants';
+import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { Image } from "react-bootstrap";
+import { BackgroundImageTemplate } from "@/components/atoms";
+import { ContainerTemplate } from "@/components/organisms";
+import { fadeIn, fadeInUp } from "../../utils/Constants";
 
 export default function Penutup() {
   const [show, setShow] = useState(false);
@@ -90,12 +90,12 @@ export default function Penutup() {
 
       <div
         className={`absolute left-0 top-0 bg-black bg-opacity-20 w-full h-full z-50 flex justify-center items-center transform ${
-          show ? 'scale-100' : 'scale-0'
+          show ? "scale-100" : "scale-0"
         }`}
       >
         <div
           className={`mx-auto bg-white p-6 space-y-6 rounded transform duration-300 ${
-            show ? 'scale-100' : 'scale-0'
+            show ? "scale-100" : "scale-0"
           }`}
         >
           <div className="space-y-2">
