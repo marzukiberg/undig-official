@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { H1Landing } from "../../components/atoms";
 import { CardLanding } from "../../components/molecules";
 import { Container } from "../../components/organisms";
@@ -5,16 +6,19 @@ import { Container } from "../../components/organisms";
 const Alur = () => {
   return (
     <section className="alur relative" id="alur">
-      <imgw
-        src="images/flower.png"
-        alt="Flower"
-        className="absolute left-0 top-0 transform w-full h-full object-contain -z-1 lg:object-cover"
-      />
+      <div className="absolute w-96 h-96 left-0 top-0 transform -translate-y-12">
+        <Image
+          layout="fill"
+          src="/images/blob1.svg"
+          alt="Blob"
+          objectFit="contain"
+        />
+      </div>
       <Container noFrame>
         <div className="space-y-12">
           <H1Landing>Alur Pemesanan</H1Landing>
 
-          <div className="grid gap-3 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 gap-y-10 md:grid-cols-2 lg:grid-cols-4 w-full">
             <CardLanding className="text-center relative">
               <div className="text-2xl absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-11 h-11 inline-flex items-center justify-center text-white font-poppins rounded-full bg-pink-500">
                 1

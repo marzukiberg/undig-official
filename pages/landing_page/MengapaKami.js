@@ -1,12 +1,12 @@
 import { H1Landing } from "../../components/atoms/H1";
 import Card from "../components/Card";
 import Image from "next/image";
-import Container from "../components/Container";
+import { Container } from "../../components/organisms";
 
 const MengapaKami = () => {
   return (
     <section className="mengapa_kami" id="mengapa_kami">
-      <Container>
+      <Container noFrame>
         <div className="space-y-6">
           <H1Landing>Kenapa harus Undig?</H1Landing>
 

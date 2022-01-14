@@ -5,3 +5,4 @@ export * from "./DateFrame";
 export * from "./H1";
 export * from "./LoveStory";
 export * from "./PageLoader";
+export * from "./Navbar";

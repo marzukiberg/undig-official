@@ -18,7 +18,7 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
         noOverlay
       />
 
-      <Container noFrame>
+      <Container>
         <h1 className="text-center font-salsa text-3xl text-pink-500 wow slideInLeft">
           The Wedding Of
         </h1>
@@ -40,14 +40,14 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
         </div>
 
         <div
-          className="content__belongs font-roboto space-y-3 wow fadeInUp"
+          className="text-center font-roboto space-y-3 wow fadeInUp"
           data-wow-delay="600ms"
         >
           <div>
             <span>Kepada Yth:</span>
             <span>Alumni SIF</span>
           </div>
-          <div className="w-1/2 h-4 relative object-contain block mx-auto mb-6">
+          <div className="w-full h-4 relative object-contain block mx-auto mb-6">
             <Image
               layout="fill"
               objectFit="contain"
