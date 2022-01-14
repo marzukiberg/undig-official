@@ -1,7 +1,8 @@
 import { H1Landing } from "../../components/atoms/H1";
-import Card from "../components/Card";
+
 import Image from "next/image";
 import { Container } from "../../components/organisms";
+import { CardLanding } from "../../components/molecules";
 
 const MengapaKami = () => {
   return (
@@ -19,8 +20,8 @@ const MengapaKami = () => {
             />
           </div>
 
-          <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-3">
-            <Card className="text-center">
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+            <CardLanding className="text-center">
               <div className="text-center text-4xl text-gray-700">
                 <i className="fa fa-magic" aria-hidden="true"></i>
               </div>
@@ -31,8 +32,8 @@ const MengapaKami = () => {
                 Undangan Anda akan terlihat bergaya, kami menyajikan template
                 undangan yang animatif sehingga akan terlihat lebih menarik.
               </p>
-            </Card>
-            <Card className="text-center">
+            </CardLanding>
+            <CardLanding className="text-center">
               <div className="text-center text-4xl text-gray-700">
                 <i className="fa fa-music" aria-hidden="true"></i>
               </div>
@@ -43,8 +44,8 @@ const MengapaKami = () => {
                 Undangan Anda akan diiringi musik, alunan musik indah siap
                 mengiringi undangan Anda.
               </p>
-            </Card>
-            <Card className="text-center">
+            </CardLanding>
+            <CardLanding className="text-center">
               <div className="text-center text-4xl text-gray-700">
                 <i className="fa fa-music" aria-hidden="true"></i>
               </div>
@@ -55,7 +56,7 @@ const MengapaKami = () => {
                 Jelajahi berbagai template yang cantik dari kami, pilih template
                 Anda dan lakukan pemesanan.
               </p>
-            </Card>
+            </CardLanding>
           </div>
         </div>
       </Container>

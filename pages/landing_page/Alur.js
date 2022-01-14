@@ -6,7 +6,7 @@ import { Container } from "../../components/organisms";
 const Alur = () => {
   return (
     <section className="alur relative" id="alur">
-      <div className="absolute w-96 h-96 left-0 top-0 transform -translate-y-12">
+      <div className="absolute w-96 h-96 left-0 top-0 transform -translate-y-12 -z-1">
         <Image
           layout="fill"
           src="/images/blob1.svg"
@@ -18,7 +18,7 @@ const Alur = () => {
         <div className="space-y-12">
           <H1Landing>Alur Pemesanan</H1Landing>
 
-          <div className="grid gap-3 gap-y-10 md:grid-cols-2 lg:grid-cols-4 w-full">
+          <div className="grid gap-3 gap-y-10 sm:grid-cols-2 md:grid-cols-4 w-full">
             <CardLanding className="text-center relative">
               <div className="text-2xl absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-11 h-11 inline-flex items-center justify-center text-white font-poppins rounded-full bg-pink-500">
                 1
@@ -45,9 +45,10 @@ const Alur = () => {
                 Lakukan Pemesanan
               </h4>
               <p className="font-roboto leading-8">
-                Klik '<b>Pesan Sekarang</b>' untuk memesan template yang
-                dipilih, atau lihat template terlebih dahulu dengan mengklik '
-                <b>Preview</b>'.
+                Klik &apos;<b>Pesan Sekarang</b>&apos; untuk memesan template
+                yang dipilih, atau lihat template terlebih dahulu dengan
+                mengklik &apos;
+                <b>Preview</b>&apos;.
               </p>
             </CardLanding>
             <CardLanding className="text-center relative">

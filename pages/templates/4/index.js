@@ -1,14 +1,14 @@
-import { useRef, useState } from 'react';
-import Scrollbar from 'react-scrollbars-custom';
-import Header from '../../components/Header';
-import Acara from './Acara';
-import Footer from './Footer';
-import Galeri from './Galeri';
-import LoveStory from './LoveStory';
-import Mempelai from './Mempelai';
-import Pembuka from './Pembuka';
-import Penutup from './Penutup';
-import Peta from './Peta';
+import { useRef, useState } from "react";
+import Scrollbar from "react-scrollbars-custom";
+import Header from "../../components/Header";
+import Acara from "./Acara";
+import Footer from "./Footer";
+import Galeri from "./Galeri";
+import LoveStory from "./LoveStory";
+import Mempelai from "./Mempelai";
+import Pembuka from "./Pembuka";
+import Penutup from "./Penutup";
+import Peta from "./Peta";
 
 export default function index() {
   const audioRef = useRef();

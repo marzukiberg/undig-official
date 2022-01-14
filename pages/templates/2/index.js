@@ -1,14 +1,15 @@
-import { useRef, useState } from 'react';
-import Scrollbar from 'react-scrollbars-custom';
-import Header from '../../components/Header';
-import Acara from './Acara';
-import Footer from './Footer';
-import Galeri from './Galeri';
-import LoveStory from './LoveStory';
-import Mempelai from './Mempelai';
-import Pembuka from './Pembuka';
-import Penutup from './Penutup';
-import Peta from './Peta';
+import Script from "next/script";
+import { useRef, useState } from "react";
+import Scrollbar from "react-scrollbars-custom";
+import Header from "../../components/Header";
+import Acara from "./Acara";
+import Footer from "./Footer";
+import Galeri from "./Galeri";
+import LoveStory from "./LoveStory";
+import Mempelai from "./Mempelai";
+import Pembuka from "./Pembuka";
+import Penutup from "./Penutup";
+import Peta from "./Peta";
 
 export default function index() {
   const audioRef = useRef();
@@ -35,7 +36,7 @@ export default function index() {
   ];
 
   return (
-    <div>
+    <>
       <audio src="/wedding.mp3" ref={audioRef}></audio>
       <Header title="Raihan dan Rahma" />
 
@@ -69,6 +70,6 @@ export default function index() {
         {PAGES[pageindex]}
         {pageindex !== 0 && <Footer {...pageProps} />}
       </Scrollbar>
-    </div>
+    </>
   );
 }

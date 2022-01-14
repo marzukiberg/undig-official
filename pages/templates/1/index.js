@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { useRef, useState } from "react";
 import Scrollbar from "react-scrollbars-custom";
 import Header from "../../components/Header";

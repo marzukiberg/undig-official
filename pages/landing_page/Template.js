@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { H1Landing } from "../../components/atoms/H1";
-import { CardLanding } from "../../components/molecules/Card";
-import Container from "../components/Container";
+import { CardLanding } from "../../components/molecules";
+import { Container } from "../../components/organisms";
 
 const Template = () => {
   const templates = [
@@ -68,7 +68,7 @@ const Template = () => {
       <Container className="space-y-12">
         <H1Landing>Template</H1Landing>
         <br />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {templates.map((item, index) => (
             <CardLanding
               className="shadow p-0 space-y-3 text-center"
@@ -78,13 +78,15 @@ const Template = () => {
                 <div className="relative w-full h-80">
                   <Image
                     layout="fill"
+                    objectFit="contain"
                     src={item.img}
                     alt="Template"
-                    objectFit="contain"
                     onClick={() => openImage(item.img)}
                   />
                 </div>
-                <img
+                <Image
+                  layout="fill"
+                  objectFit="contain"
                   src={item.img}
                   alt="Template"
                   className="w-full h-full object-cover absolute left-0 top-0 -z-1 filter blur-sm"
@@ -94,7 +96,7 @@ const Template = () => {
                 <h4 className="text-lg font-quicksand font-bold capitalize text-center relative inline-block">
                   {item.title}
                   {item.new && (
-                    <span class="absolute -right-2 -top-1 transform translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+                    <span className="absolute -right-2 -top-1 transform translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
                       Baru
                     </span>
                   )}
@@ -110,7 +112,7 @@ const Template = () => {
                         {link.text}
 
                         {link.new && (
-                          <span class="absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+                          <span className="absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
                             Baru
                           </span>
                         )}
