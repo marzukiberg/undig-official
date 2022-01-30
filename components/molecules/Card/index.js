@@ -22,10 +22,7 @@ export const CardMempelai = ({ name, img, parentLabel, parent, reverse }) => {
         reverse ? "flex-row-reverse" : ""
       } gap-x-3 rounded-xl  bg-white shadow-lg border group wow fadeInUp`}
     >
-      <div
-        className="w-32 h-52 rounded-xl shadow-lg
-      transform group-hover:-translate-y-3 duration-300 overflow-hidden"
-      >
+      <div className="w-32 h-52 rounded-xl shadow-lg overflow-hidden relative">
         <Image layout="fill" src={img} objectFit="cover" />
       </div>
       <div className="text-center space-y-2 p-2 flex-grow">

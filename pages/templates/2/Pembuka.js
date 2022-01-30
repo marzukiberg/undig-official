@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BackgroundImageTemplate } from "@/components/atoms";
 import { ContainerTemplate } from "@/components/organisms";
-import styles from "./Pembuka.module.css";
+import { FrameNama } from "../../../components/molecules/FrameNama";
 
 export default function Pembuka({ setpageindex, toggleAudio }) {
   const bukaUndangan = () => {
@@ -22,21 +22,7 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
           The Wedding Of
         </h1>
 
-        <div className="content__names-holder relative text-center">
-          <div className="content__names-background w-80 h-96 block mx-auto relative">
-            <Image
-              layout="fill"
-              objectFit="contain"
-              src="/templates/2/embel/frame-nama.png"
-              alt="Frame Nama"
-            />
-          </div>
-          <div className="content__names text-center w-full text-5xl text-green300 absolute top-1/2 left-0 transform -translate-y-1/2 font-salsa font-bold">
-            <div className={styles.content__name}>Raihan</div>
-            <div className={styles.content__name}>&</div>
-            <div className={styles.content__name}>Rahma</div>
-          </div>
-        </div>
+        <FrameNama type={2} maleName="Raihan" femaleName="Rahma" />
 
         <div className="content__belongs font-roboto space-y-3">
           <div>

@@ -22,12 +22,10 @@ class MyDocument extends Document {
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           />
 
-          {/* animatecss and wowjs */}
+          {/* animatecss */}
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"
-            integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw=="
-            crossOrigin="anonymous"
           />
 
           {/* Leaflet */}

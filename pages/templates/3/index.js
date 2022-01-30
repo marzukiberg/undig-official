@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
-import Scrollbar from "react-scrollbars-custom";
-import Header from "../../components/Header";
+import { ComponentHeader, CustomScrollbar } from "../../../components/atoms";
 import Acara from "./Acara";
 import Footer from "./Footer";
 import Galeri from "./Galeri";
@@ -36,39 +35,13 @@ export default function index() {
 
   return (
     <div>
+      <ComponentHeader title="Raihan dan Rahma" />
       <audio src="/wedding.mp3" ref={audioRef}></audio>
-      <Header title="Raihan dan Rahma" />
 
-      <Scrollbar
-        className="max-w-sm mx-auto min-h-screen overflow-x-hidden shadow-xl"
-        trackYProps={{
-          renderer: (props) => {
-            const { elementRef, ...restProps } = props;
-            return (
-              <span
-                {...restProps}
-                ref={elementRef}
-                className="trackY bg-indigo200"
-              />
-            );
-          },
-        }}
-        thumbYProps={{
-          renderer: (props) => {
-            const { elementRef, ...restProps } = props;
-            return (
-              <span
-                {...restProps}
-                ref={elementRef}
-                className="thumbY bg-indigo300"
-              />
-            );
-          },
-        }}
-      >
+      <CustomScrollbar bgTrackY="bg-indigo200" bgThumbY="bg-indigo300">
         {PAGES[pageindex]}
         {pageindex !== 0 && <Footer {...pageProps} />}
-      </Scrollbar>
+      </CustomScrollbar>
     </div>
   );
 }

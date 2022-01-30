@@ -1,4 +1,5 @@
 import { Router } from "next/router";
+import Script from "next/script";
 import { useState } from "react";
 import { PageLoader } from "../components/atoms";
 import "../styles/globals.css";
@@ -14,6 +15,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js" />
+      <Script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" />
       {loading ? <PageLoader /> : null}
       <Component {...pageProps} />
     </>

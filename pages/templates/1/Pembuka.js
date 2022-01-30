@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { BackgroundImageTemplate } from "@/components/atoms";
 import { Container } from "@/components/organisms";
+import { FrameNama } from "@/components/molecules";
 
 export default function Pembuka({ setpageindex, toggleAudio }) {
   const bukaUndangan = () => {
@@ -23,21 +24,7 @@ export default function Pembuka({ setpageindex, toggleAudio }) {
           The Wedding Of
         </h1>
 
-        <div className="content__names-holder relative text-center wow fadeInUp">
-          <div className="content__names-background h-full block mx-auto object-contain ">
-            <Image
-              width={300}
-              height={300}
-              src="/templates/1/embel/frame-nama.png"
-              alt="Frame Nama"
-            />
-          </div>
-          <div className="content__names text-center w-full text-4xl text-pink-500 absolute top-1/2 left-0 transform -translate-y-1/2 font-salsa font-bold">
-            <div className="">Raihan</div>
-            <div className="">&</div>
-            <div className="">Rahma</div>
-          </div>
-        </div>
+        <FrameNama maleName="Raihan" femaleName="Rahma" />
 
         <div
           className="text-center font-roboto space-y-3 wow fadeInUp"
