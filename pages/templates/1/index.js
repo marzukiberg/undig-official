@@ -1,7 +1,6 @@
-import Script from "next/script";
 import { useRef, useState } from "react";
 import Scrollbar from "react-scrollbars-custom";
-import Header from "../../components/Header";
+import { ComponentHeader } from "../../../components/atoms";
 import Acara from "./Acara";
 import Footer from "./Footer";
 import Galeri from "./Galeri";
@@ -38,7 +37,7 @@ export default function index() {
   return (
     <div className="template_one">
       <audio src="/wedding.mp3" ref={audioRef}></audio>
-      <Header title="Raihan dan Rahma" />
+      <ComponentHeader title="Raihan dan Rahma" />
 
       <Scrollbar
         className="max-w-md mx-auto min-h-screen overflow-x-hidden shadow-xl"

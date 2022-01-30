@@ -5,7 +5,7 @@ import { ContainerTemplate } from "@/components/organisms";
 export default function Peta() {
   const mapRef = useRef();
   const mapLinkRef = useRef();
-  useEffect(async () => {
+  useEffect(() => {
     if (window) {
       initMap();
     }

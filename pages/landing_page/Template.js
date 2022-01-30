@@ -104,8 +104,8 @@ const Template = () => {
                 <p className="font-roboto leading-8">{item.desc}</p>
 
                 <div className="flex space-x-3 items-center justify-center">
-                  {item.links.map((link) => (
-                    <Link href={link.link}>
+                  {item.links.map((link, idx) => (
+                    <Link href={link.link} key={idx}>
                       <button
                         className={`${item.btnColor} py-2 px-6 rounded text-white font-poppins relative`}
                       >
