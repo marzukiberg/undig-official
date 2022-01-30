@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { H1Landing } from "../../components/atoms/H1";
-import { CardLanding } from "../../components/molecules";
-import { Container } from "../../components/organisms";
+import { H1Landing } from "@/components/atoms/H1";
+import { CardLanding } from "@/components/molecules";
+import { Container } from "@/components/organisms";
 
 const Template = () => {
   const templates = [

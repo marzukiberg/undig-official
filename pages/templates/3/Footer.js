@@ -20,8 +20,6 @@ const BottomLink = ({
 export default function Footer({ pageindex, setpageindex }) {
   return (
     <footer
-      initial="hide"
-      animate="show"
       id="template-one"
       className="flex fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm mx-auto z-50 "
       style={{

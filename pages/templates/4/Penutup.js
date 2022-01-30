@@ -1,9 +1,6 @@
-import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Image } from "react-bootstrap";
-import { BackgroundImageTemplate } from "@/components/atoms";
-import { ContainerTemplate } from "@/components/organisms";
-import { fadeIn, fadeInUp } from "../../utils/Constants";
+import { TemplateWrapper } from "@/components/organisms";
 
 export default function Penutup() {
   const [show, setShow] = useState(false);
@@ -13,80 +10,67 @@ export default function Penutup() {
   };
 
   return (
-    <motion.section
-      variants={fadeIn}
-      initial="hide"
-      animate="show"
-      id="penutup"
-      className="penutup relative"
-    >
-      <BackgroundImage src="/templates/3/background/7.png" />
-
-      <ContainerTemplate>
-        <motion.div
-          variants={fadeInUp}
-          className="header text-center font-roboto space-y-3 text-sm"
+    <TemplateWrapper backgroundImage="/templates/3/background/7.png">
+      <div className="header text-center font-roboto space-y-3 text-sm">
+        <p className="font-bold">
+          Bagi para tamu undangan diharapkan mengikuti protokol pecegahan
+          Covid-19. (Memakai masker dan menjaga jarak fisik)
+        </p>
+        <p>
+          “Dan diantara tanda-tanda kekuasaan-Nya ialah Dia Menciptakan untukmu
+          istri-istri, supaya kamu cenderung dan merasa tentram kepadanya, dan
+          dijadikan-Nya di antaramu rasa kasih dan sayang. Sesungguhnya pada
+          yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+          berpikir.” <br /> (Q.S. Ar-Rum : 21) <br />
+          <strong>Wassalamu’alaikum Warahmatullahi Wabarakatuh</strong>
+        </p>
+      </div>
+      <div className="content space-y-3">
+        <div className="font-quicksand flex flex-col items-center text-sm">
+          <span>Turut Berbahagia</span>
+          <span>Segenap Keluarga Besar</span>
+        </div>
+        <div className="font-segoe font-bold text-2xl text-indigo700">
+          ~ Raihan <span className="text-dark">&</span> Rahma ~
+        </div>
+        <p className="font-quicksand text-sm">
+          Tekan tombol konfirmasi di bawah ini! Dan pastikan kehadiran kamu
+        </p>
+        <button
+          className="block mx-auto px-6 py-2 bg-indigo700 rounded-lg shadow-lg text-white font-poppins duration-300 hover:bg-indigo900"
+          onClick={toggleModal}
         >
-          <p className="font-bold">
-            Bagi para tamu undangan diharapkan mengikuti protokol pecegahan
-            Covid-19. (Memakai masker dan menjaga jarak fisik)
-          </p>
-          <p>
-            “Dan diantara tanda-tanda kekuasaan-Nya ialah Dia Menciptakan
-            untukmu istri-istri, supaya kamu cenderung dan merasa tentram
-            kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.
-            Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda
-            bagi kaum yang berpikir.” <br /> (Q.S. Ar-Rum : 21) <br />
-            <strong>Wassalamu’alaikum Warahmatullahi Wabarakatuh</strong>
-          </p>
-        </motion.div>
-        <motion.div variants={fadeInUp} className="content space-y-3">
-          <div className="font-quicksand flex flex-col items-center text-sm">
-            <span>Turut Berbahagia</span>
-            <span>Segenap Keluarga Besar</span>
-          </div>
-          <div className="font-segoe font-bold text-2xl text-indigo700">
-            ~ Raihan <span className="text-dark">&</span> Rahma ~
-          </div>
-          <p className="font-quicksand text-sm">
-            Tekan tombol konfirmasi di bawah ini! Dan pastikan kehadiran kamu
-          </p>
-          <button
-            className="block mx-auto px-6 py-2 bg-indigo700 rounded-lg shadow-lg text-white font-poppins duration-300 hover:bg-indigo900"
-            onClick={toggleModal}
-          >
-            Konfirmasi Kehadiran
-          </button>
+          Konfirmasi Kehadiran
+        </button>
 
-          <div className="space-y-3 font-quicksand text-sm">
-            <div className="bg">
-              Website Invitation Supported By <br />
-              <span className="text-indigo700 font-bold cursor-pointer">
-                Undig Official
-              </span>
-            </div>
-            <div className="grid gap-x-3 grid-cols-2">
-              <a
-                href="#"
-                target="_blank"
-                className="p-3 flex flex-col items-center font-bold"
-              >
-                <Image src="/templates/3/whatsapp.svg" alt="Whatsapp" />
-                <span className="d-block">082286062083</span>
-              </a>
-
-              <a
-                href="#"
-                target="_blank"
-                className="p-3 flex flex-col items-center font-bold"
-              >
-                <Image src="/templates/3/instagram.svg" alt="Instagram" />
-                <span className="d-block">undig_official</span>
-              </a>
-            </div>
+        <div className="space-y-3 font-quicksand text-sm">
+          <div className="bg">
+            Website Invitation Supported By <br />
+            <span className="text-indigo700 font-bold cursor-pointer">
+              Undig Official
+            </span>
           </div>
-        </motion.div>
-      </ContainerTemplate>
+          <div className="grid gap-x-3 grid-cols-2">
+            <a
+              href="#"
+              target="_blank"
+              className="p-3 flex flex-col items-center font-bold"
+            >
+              <Image src="/templates/3/whatsapp.svg" alt="Whatsapp" />
+              <span className="d-block">082286062083</span>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              className="p-3 flex flex-col items-center font-bold"
+            >
+              <Image src="/templates/3/instagram.svg" alt="Instagram" />
+              <span className="d-block">undig_official</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
       <div
         className={`absolute left-0 top-0 bg-black bg-opacity-20 w-full h-full z-50 flex justify-center items-center transform ${
@@ -146,6 +130,6 @@ export default function Penutup() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </TemplateWrapper>
   );
 }

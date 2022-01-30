@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import { H1Landing } from "../../components/atoms";
-import { Container } from "../../components/organisms";
+import { H1Landing } from "@/components/atoms";
+import { Container } from "@/components/organisms";
 const Contact = () => {
   const nama = useRef();
   const pesan = useRef();

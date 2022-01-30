@@ -15,18 +15,28 @@ export const CardLanding = (props) => {
   );
 };
 
-export const CardMempelai = ({ name, img, parentLabel, parent, reverse }) => {
+export const CardMempelai = ({
+  name,
+  img,
+  parentLabel,
+  themeColor = "text-yellow-400",
+  parent,
+  reverse,
+  noBackground = false,
+}) => {
   return (
     <div
       className={`flex ${
         reverse ? "flex-row-reverse" : ""
-      } gap-x-3 rounded-xl  bg-white shadow-lg border group wow fadeInUp`}
+      } gap-x-3 rounded-xl ${
+        noBackground ? "" : "bg-white shadow-lg border"
+      } group wow fadeInUp`}
     >
       <div className="w-32 h-52 rounded-xl shadow-lg overflow-hidden relative">
         <Image layout="fill" src={img} objectFit="cover" />
       </div>
       <div className="text-center space-y-2 p-2 flex-grow">
-        <h2 className="text-xl text-yellow-400 font-salsa">{name}</h2>
+        <h2 className={`text-xl ${themeColor} font-salsa`}>{name}</h2>
         <Image
           width={100}
           height={4}

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { H1Landing } from "../../components/atoms";
-import { CardLanding } from "../../components/molecules";
-import { Container } from "../../components/organisms";
+import { H1Landing } from "@/components/atoms";
+import { CardLanding } from "@/components/molecules";
+import { Container } from "@/components/organisms";
 import classess from "./Paket.module.css";
 
 const paket = [

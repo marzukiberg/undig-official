@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ComponentHeader, CustomScrollbar } from "../../../components/atoms";
+import { ComponentHeader, CustomScrollbar } from "@/components/atoms";
 import Acara from "./Acara";
 import Footer from "./Footer";
 import Galeri from "./Galeri";

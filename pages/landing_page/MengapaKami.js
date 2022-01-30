@@ -1,8 +1,8 @@
-import { H1Landing } from "../../components/atoms/H1";
+import { H1Landing } from "@/components/atoms/H1";
 
 import Image from "next/image";
-import { Container } from "../../components/organisms";
-import { CardLanding } from "../../components/molecules";
+import { Container } from "@/components/organisms";
+import { CardLanding } from "@/components/molecules";
 
 const MengapaKami = () => {
   return (

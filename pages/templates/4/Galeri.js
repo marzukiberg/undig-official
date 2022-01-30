@@ -1,11 +1,9 @@
-import { motion } from "framer-motion";
+import Image from "next/image";
 import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Modal from "react-modal";
-import { BackgroundImageTemplate } from "@/components/atoms";
-import { ContainerTemplate } from "@/components/organisms";
-import { fadeIn, fadeInUp } from "../../utils/Constants";
+import { TemplateWrapper } from "@/components/organisms";
 
 export default function Galeri() {
   const [modalGallery, showModalGallery] = useState(false);
@@ -34,7 +32,7 @@ export default function Galeri() {
   ];
 
   return (
-    <>
+    <TemplateWrapper backgroundImage="/templates/3/background/5.png">
       <Modal
         isOpen={modalGallery}
         onRequestClose={() => showModalGallery(false)}
@@ -45,37 +43,26 @@ export default function Galeri() {
           <ImageGallery items={images} lazyLoad />
         </div>
       </Modal>
-      <motion.section
-        variants={fadeIn}
-        initial="hide"
-        animate="show"
-        id="galeri"
-        className="galeri relative"
-      >
-        <BackgroundImage src="/templates/3/background/5.png" />
 
-        <ContainerTemplate>
-          <div className="header text-center font-quicksand space-y-3">
-            <motion.h1
-              variants={fadeInUp}
-              className="text-center font-segoe text-3xl"
-            >
-              You & Me
-            </motion.h1>
+      <div className="header text-center font-quicksand space-y-3">
+        <h1 className="text-center font-segoe text-3xl">You & Me</h1>
+      </div>
+      <div className="content space-y-3">
+        {images.map((item, index) => (
+          <div
+            key={index}
+            className="rounded-xl w-72 h-72 cursor-pointer block mx-auto duration-300 transform hover:-translate-y-1 relative overflow-hidden"
+          >
+            <Image
+              src={`${item.original}`}
+              alt={`Galeri ${index + 1}`}
+              layout="fill"
+              objectFit="cover"
+              onClick={() => showModalGallery(true)}
+            />
           </div>
-          <motion.div variants={fadeIn} className="content space-y-3">
-            {images.map((item, index) => (
-              <img
-                key={index}
-                src={`${item.original}`}
-                alt={`Galeri ${index + 1}`}
-                className="rounded-xl w-72 h-72 object-cover cursor-pointer block mx-auto duration-300 transform hover:-translate-y-1"
-                onClick={() => showModalGallery(true)}
-              />
-            ))}
-          </motion.div>
-        </ContainerTemplate>
-      </motion.section>
-    </>
+        ))}
+      </div>
+    </TemplateWrapper>
   );
 }
