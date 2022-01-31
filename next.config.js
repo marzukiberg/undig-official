@@ -1,4 +1,10 @@
 module.exports = {
-  // basePath: "/undig-official",
   trailingSlash: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    loader: "imgix",
+    path: "https://undig-cdn.imgix.net/",
+  },
 };

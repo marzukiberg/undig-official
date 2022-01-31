@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="absolute left-0 top-0 w-full h-full object-cover -z-1">
         <Image
           layout="fill"
-          src="/images/wedding-table.jpg"
+          src="wedding-table.jpg"
           objectFit="cover"
           alt="Hero"
         />

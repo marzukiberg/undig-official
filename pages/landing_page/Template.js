@@ -7,8 +7,8 @@ import { Container } from "@/components/organisms";
 const Template = () => {
   const templates = [
     {
-      img: "/images/templates/1.png",
-      smallImg: "/images/templates/mini/1.png",
+      img: "templates/1.png",
+      smallImg: "templates/mini/1.png",
       title: "Rose",
       desc: "Template dengan nuansa penuh cinta berwarna pink.",
       btnColor: "bg-pink-500",
@@ -20,8 +20,8 @@ const Template = () => {
       ],
     },
     {
-      img: "/images/templates/2.png",
-      smallImg: "/images/templates/mini/2.png",
+      img: "templates/2.png",
+      smallImg: "templates/mini/2.png",
       title: "Green",
       desc: "Template dengan nuansa kehijauan siap memanjakan tamu undangan Anda dengan tampilan yang enak dipandang.",
       btnColor: "bg-green300",
@@ -38,8 +38,8 @@ const Template = () => {
       ],
     },
     {
-      img: "/images/templates/3.png",
-      smallImg: "/images/templates/mini/3.png",
+      img: "templates/3.png",
+      smallImg: "templates/mini/3.png",
       title: "Purple",
       desc: "Template dengan nuansa kehijauan siap memanjakan tamu undangan Anda dengan tampilan yang enak dipandang.",
       btnColor: "bg-indigo500",
@@ -61,7 +61,7 @@ const Template = () => {
     <section className="template relative" id="template">
       <Image
         layout="fill"
-        src="/images/flower.png"
+        src="flower.png"
         alt="Flower"
         className="background absolute left-0 top-0 w-full h-full object-contain -z-1 lg:object-cover"
       />

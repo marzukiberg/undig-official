@@ -14,7 +14,7 @@ const MengapaKami = () => {
           <div className="block mx-auto h-64 md:w-1/2 lg:w-96 lg:float-left lg:mr-3 relative">
             <Image
               layout="fill"
-              src="/images/whyus.png"
+              src="whyus.png"
               alt="Mengapa Kami"
               objectFit="contain"
             />

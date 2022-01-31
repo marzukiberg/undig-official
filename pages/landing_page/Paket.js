@@ -76,7 +76,7 @@ const Paket = () => {
                 <Image
                   layout="fill"
                   objectFit="contain"
-                  src={`/images/${item.icon}`}
+                  src={`${item.icon}`}
                   alt="Icon"
                 />
               </div>

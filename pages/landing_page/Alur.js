@@ -7,12 +7,7 @@ const Alur = () => {
   return (
     <section className="alur relative" id="alur">
       <div className="absolute w-96 h-96 left-0 top-0 transform -translate-y-12 -z-1">
-        <Image
-          layout="fill"
-          src="/images/blob1.svg"
-          alt="Blob"
-          objectFit="contain"
-        />
+        <Image layout="fill" src="blob1.svg" alt="Blob" objectFit="contain" />
       </div>
       <Container noFrame>
         <div className="space-y-12">
